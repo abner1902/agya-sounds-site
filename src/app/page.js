@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import About from "./components/About";
+import Artists from "./components/Artists";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </section>
 
       <About />
+      <Artists />
       
       <div style={{ height: '20vh', background: 'black' }} />
     </main>
