@@ -1,26 +1,24 @@
 'use client';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const Section = styled.section`
   background-color: #000;
-  padding: 80px 60px;
+  padding: 100px 60px;
   display: flex;
   align-items: center;
-  justify-content: center; /* Centralizado para diminuir o espaçamento */
-  gap: 80px;
+  justify-content: center;
+  gap: 100px;
   min-height: 80vh;
-  @media (max-width: 1024px) {
+  @media (max-width: 1100px) {
     flex-direction: column;
     padding: 60px 20px;
-    gap: 40px;
+    gap: 50px;
   }
 `;
 
@@ -30,26 +28,26 @@ const ContentSide = styled.div`
 
 const Title = styled.h2`
   color: white;
-  font-size: 36px;
+  font-size: 40px;
   font-family: 'Gotham', sans-serif;
   font-weight: 900;
   margin-bottom: 24px;
+  text-transform: uppercase;
 `;
 
 const Description = styled.p`
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   font-family: 'Gotham', sans-serif;
   font-weight: 400;
-  line-height: 1.4;
-  margin-bottom: 40px;
+  line-height: 1.5;
+  margin-bottom: 44px;
   opacity: 0.9;
 `;
 
 const Button = styled.a`
   display: inline-flex;
-  width: 224px;
-  height: 56px;
+  padding: 16px 40px;
   background-color: #6d28d9;
   border-radius: 12px;
   justify-content: center;
@@ -61,56 +59,33 @@ const Button = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.3s ease;
-  cursor: pointer;
   &:hover {
     transform: scale(1.05);
     background-color: #7c3aed;
-    box-shadow: 0 0 20px rgba(109, 40, 217, 0.5);
+    box-shadow: 0 0 25px rgba(109, 40, 217, 0.6);
   }
 `;
 
 const SliderSide = styled.div`
   width: 626px;
   height: 417px;
-  position: relative;
+  border-radius: 38px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
   @media (max-width: 768px) {
     width: 100%;
     height: auto;
   }
-
-  .swiper {
-    border-radius: 38px;
-    overflow: hidden;
-  }
 `;
 
 const ArtistImage = styled.img`
-  width: 626px;
-  height: 417px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 `;
 
-const ArtistNameOverlay = styled.div`
-  position: absolute;
-  bottom: 20px;
-  left: 30px;
-  color: white;
-  font-family: 'Gotham', sans-serif;
-  font-weight: 900;
-  font-size: 24px;
-  z-index: 10;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
-`;
-
 export default function Artists() {
-  // Array repetindo a mesma imagem para o slideshow funcionar
-  const slides = [
-    { id: 1, name: "ABSYCHO LIVE", img: "/ABSYCHO_LIVE.jpg" },
-    { id: 2, name: "ABSYCHO LIVE", img: "/ABSYCHO_LIVE.jpg" },
-    { id: 3, name: "ABSYCHO LIVE", img: "/ABSYCHO_LIVE.jpg" }
-  ];
-
   return (
     <Section id="artistas">
       <ContentSide>
@@ -125,19 +100,20 @@ export default function Artists() {
 
       <SliderSide>
         <Swiper
-          modules={[Autoplay, EffectFade, Navigation, Pagination]}
+          modules={[Autoplay, EffectFade, Pagination]}
           effect="fade"
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
           loop={true}
           pagination={{ clickable: true }}
-          className="mySwiper"
         >
-          {slides.map((slide) => (
-            <SwiperSlide key={slide.id}>
-              <ArtistImage src={slide.img} alt={slide.name} />
-              <ArtistNameOverlay>{slide.name}</ArtistNameOverlay>
-            </SwiperSlide>
-          ))}
+          <SwiperSlide>
+            <ArtistImage src="/ABSYCHO_LIVE.png" alt="ABSYCHO LIVE" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <div style={{ width: '100%', height: '417px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontSize: '32px', fontWeight: 'bold' }}>
+              EM BREVE
+            </div>
+          </SwiperSlide>
         </Swiper>
       </SliderSide>
     </Section>
