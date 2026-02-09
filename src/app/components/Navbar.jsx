@@ -16,6 +16,7 @@ export default function Navbar() {
         <li className="hover:text-cyan-400 transition cursor-pointer">Sobre</li>
         <li className="hover:text-cyan-400 transition cursor-pointer">Artistas</li>
         <li className="hover:text-cyan-400 transition cursor-pointer">Lançamentos</li>
+        <li className="hover:text-cyan-400 transition cursor-pointer">Tutoriais</li>
         <li className="hover:text-cyan-400 transition cursor-pointer">Contato</li>
       </ul>
 

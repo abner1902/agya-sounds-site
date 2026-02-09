@@ -13,7 +13,6 @@ const NavContainer = styled.nav`
   align-items: center;
   justify-content: space-between;
   padding: 0 60px;
-  /* Degradê fixo que acompanha o scroll */
   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
   backdrop-filter: blur(8px);
   font-family: "Gotham", sans-serif;
@@ -21,7 +20,7 @@ const NavContainer = styled.nav`
 `;
 
 const NavList = styled.ul`
-  display: flex; gap: 40px; list-style: none; align-items: center; margin: 0; padding: 0;
+  display: flex; gap: 35px; list-style: none; align-items: center; margin: 0; padding: 0;
   @media (max-width: 1024px) { display: none; }
 `;
 
@@ -31,21 +30,22 @@ const NavItem = styled.li`
 `;
 
 const RightSection = styled.div`
-  display: flex; align-items: center; justify-content: flex-end; width: 200px;
+  display: flex; align-items: center; justify-content: flex-end; width: 150px;
   a { color: white; font-size: 24px; transition: 0.3s; &:hover { color: #B1A27A; } }
 `;
 
 export default function Navbar() {
   return (
     <NavContainer>
-      <div style={{ width: '200px' }}>
-        <img src="/logo-menu-agya.png" alt="Agya" style={{ height: '45px', width: 'auto', display: 'block' }} />
+      <div style={{ width: '150px' }}>
+        <img src="/logo-menu-agya.png" alt="Agya" style={{ height: '45px', width: 'auto' }} />
       </div>
       <NavList>
         <NavItem><a href="#">Início</a></NavItem>
         <NavItem><a href="#">Sobre</a></NavItem>
         <NavItem><a href="#">Artistas</a></NavItem>
         <NavItem><a href="#">Lançamentos</a></NavItem>
+        <NavItem><a href="#">Tutoriais</a></NavItem>
         <NavItem><a href="#">Contato</a></NavItem>
       </NavList>
       <RightSection>
