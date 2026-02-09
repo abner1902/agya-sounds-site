@@ -1,12 +1,11 @@
 import Navbar from "./components/Navbar";
-import About from "../components/About";
+import About from "./components/About";
 
 export default function Home() {
   return (
     <main style={{ backgroundColor: 'black', minHeight: '100vh' }}>
       <Navbar />
       
-      {/* HERO SECTION - LIMPA */}
       <section style={{ height: '100vh', width: '100%', position: 'relative', overflow: 'hidden' }}>
         <div style={{ 
           position: 'absolute', 
@@ -18,7 +17,6 @@ export default function Home() {
         }} />
       </section>
 
-      {/* SEÇÃO SOBRE COM OS PESOS GOTHAM */}
       <About />
       
       <div style={{ height: '20vh', background: 'black' }} />
