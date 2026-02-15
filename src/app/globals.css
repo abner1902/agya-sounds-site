@@ -1,14 +1,70 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tw-animate-css";
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+@plugin "tailwindcss-animate";
+@custom-variant dark (&:is(.dark *));
+
+/* =========================
+   FONTES
+========================= */
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   RESET GLOBAL
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BASE DO SITE
+========================= */
+html {
+  font-size: 18px; /* <<< AQUI está o tamanho base real */
+}
 
 body {
   background: black;
   color: white;
   overflow-x: hidden;
-}
-body {
+  font-family: 'Gotham', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   padding-top: 80px;
+  line-height: 1.5;
+}
+
+/* =========================
+   FUNDO RESPONSIVO
+========================= */
+.bg-agya {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+  .bg-agya {
+  }
 }
