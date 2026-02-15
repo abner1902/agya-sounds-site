@@ -8,7 +8,20 @@ import Link from 'next/link';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const links = ['Início', 'Sobre', 'Artistas', 'Lançamentos', 'Tutoriais', 'Contato'];
+  
+  // Lista de links com os nomes corretos
+  const links = ['Início', 'Sobre', 'Artistas', 'Lançamentos', 'Streaming', 'Instagram', 'Vídeos', 'Tutoriais', 'Contato'];
+
+  // Função para definir o destino correto do link (href)
+  const getHref = (item) => {
+    if (item === 'Tutoriais') return 'https://www.psychedeliclab.com.br/';
+    if (item === 'Início') return '#';
+    if (item === 'Streaming') return '#music'; // Link para a seção MusicSocialMedia/HUB
+    if (item === 'Contato') return '#contato'; // Link para o Footer
+    
+    // Para os outros, remove acentos e cria o ID (ex: Vídeos -> #videos)
+    return `#${item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`;
+  };
 
   return (
     <>
@@ -16,7 +29,7 @@ export default function Navbar() {
         <div className="flex h-[80px] w-full items-center justify-between px-6 md:px-12 lg:px-20">
           
           {/* Logo */}
-          <Link href="/" className="transition-transform hover:scale-105">
+          <Link href="#home" className="transition-transform hover:scale-105">
             <Image
               src="/logo-menu-agya.png"
               alt="Agya Sounds"
@@ -32,7 +45,9 @@ export default function Navbar() {
             {links.map((item) => (
               <li key={item}>
                 <a
-                  href={`#${item.toLowerCase()}`}
+                  href={getHref(item)}
+                  target={item === 'Tutoriais' ? "_blank" : "_self"}
+                  rel={item === 'Tutoriais' ? "noopener noreferrer" : ""}
                   className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100"
                 >
                   {item}
@@ -67,7 +82,8 @@ export default function Navbar() {
         {links.map((item) => (
           <a
             key={item}
-            href={`#${item.toLowerCase()}`}
+            href={getHref(item)}
+            target={item === 'Tutoriais' ? "_blank" : "_self"}
             onClick={() => setOpen(false)}
             className="text-2xl font-black uppercase tracking-widest text-white hover:text-[#B1A27A]"
           >

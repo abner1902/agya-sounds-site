@@ -41,7 +41,7 @@ export default function Releases() {
   ];
 
   return (
-    <section id="lancamentos" className="flex min-h-screen items-center justify-center bg-black px-[60px] py-[100px] max-[1100px]:px-5 max-[1100px]:py-[60px]">
+    <section id="lancamentos" id="lancamentos" className="flex min-h-screen items-center justify-center bg-black px-[60px] py-[100px] max-[1100px]:px-5 max-[1100px]:py-[60px]">
       <div className="w-full max-w-[1300px] text-center">
         <h2 className="mb-6 font-sans text-[40px] font-black uppercase text-white max-md:text-[32px]">ÚLTIMOS LANÇAMENTOS</h2>
         <p className="mx-auto mb-[60px] max-w-[900px] font-sans text-[22px] font-normal leading-[1.5] text-white opacity-90 max-md:mb-10 max-md:text-[18px]">
