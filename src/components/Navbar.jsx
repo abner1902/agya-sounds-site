@@ -38,19 +38,19 @@ export default function Navbar() {
               alt="Agya Sounds"
               width={180}
               height={45}
-              className="h-[35px] w-auto lg:h-[45px]"
+              className="h-[30px] w-auto lg:h-[45px]"
               priority
             />
           </Link>
 
           {/* Menu desktop */}
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden items-center gap-4 lg:flex">
             {links.map((item) => (
               <li key={item}>
                 <Link
                   href={getHref(item)}
                   target={item === 'Tutoriais' ? "_blank" : "_self"}
-                  className="text-[12px] font-bold uppercase tracking-[0.2em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100"
+                  className="text-[11px] font-bold uppercase tracking-[0.1em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100"
                 >
                   {item}
                 </Link>
