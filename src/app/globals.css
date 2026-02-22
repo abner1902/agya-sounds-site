@@ -3,24 +3,20 @@
 
 @plugin "tailwindcss-animate";
 
-/* =========================
-   VARIÁVEIS DE TEMA
-========================= */
 @theme {
   --color-agya-dark: #000000;
   --color-agya-gray: #1a1a1a;
   --font-sans: var(--font-gotham), ui-sans-serif, system-ui, sans-serif;
+  --default-font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* =========================
-   BASE E RESET
-========================= */
 @layer base {
   *,
   *::before,
   *::after {
     box-sizing: border-box;
     @apply border-white/10;
+    font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif !important;
   }
 
   html {
@@ -37,9 +33,6 @@
   }
 }
 
-/* =========================
-   COMPONENTES E UTILITÁRIOS
-========================= */
 @layer utilities {
   .bg-agya-section {
     @apply bg-cover bg-center bg-no-repeat;
@@ -51,12 +44,6 @@
 }
 
 @keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
