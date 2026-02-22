@@ -134,7 +134,7 @@ export default function Artists() {
         <Swiper
           modules={[Autoplay, EffectFade, Pagination]}
           effect="fade"
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           pagination={{ clickable: true }}
         >

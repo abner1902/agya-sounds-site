@@ -3,63 +3,66 @@
 
 @plugin "tailwindcss-animate";
 
-/* Definição de Variáveis de Tema (Design System)
-  Isso ajuda a manter a consistência de cores em todo o site.
-*/
-@theme {
-  --color-agya-dark: #000000;
-  --color-agya-gray: #1a1a1a;
-  --font-gotham: 'Gotham', sans-serif;
-}
-
 /* =========================
-   FONTES
+   DECLARAÇÃO DAS FONTES GOTHAM (.ttf)
 ========================= */
 @font-face {
-  font-family: 'Gotham';
+  font-family: 'GothamCustom';
+  src: url('/fonts/GothamBold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamCustom';
+  src: url('/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamCustom';
   src: url('/fonts/GothamBlack.ttf') format('truetype');
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
 }
+
 @font-face {
-  font-family: 'Gotham';
-  src: url('/fonts/GothamBold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Gotham';
+  font-family: 'GothamCustom';
   src: url('/fonts/GothamLight.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+}
+
+/* Definição de Variáveis de Tema */
+@theme {
+  --color-agya-dark: #000000;
+  --color-agya-gray: #1a1a1a;
 }
 
 /* =========================
-   BASE E RESET (Clean Code)
+   BASE E RESET
 ========================= */
 @layer base {
   * {
-    @apply border-white/10; /* Bordas sutis por padrão */
+    @apply border-white/10;
     box-sizing: border-box;
+    /* Removido o !important daqui para não quebrar estilos inline de background */
+    font-family: 'GothamCustom', sans-serif;
   }
 
   html {
-    /* Removido o font-size: 18px manual para não quebrar o sistema de 'rem' do Tailwind.
-       Se precisar de fontes maiores, usaremos text-lg ou text-xl nos componentes. */
     scroll-behavior: smooth;
+    background-color: #000; /* Cor de segurança no nível mais baixo */
   }
 
   body {
-    @apply bg-black text-white antialiased selection:bg-white/20;
-    font-family: var(--font-gotham);
+    background-color: transparent; /* Deixa a imagem do <main> transparecer */
+    @apply text-white antialiased selection:bg-white/20;
     overflow-x: hidden;
     line-height: 1.6;
-    /* Dica de Designer: Evite padding-top no body. 
-       Se o seu Header é fixo, adicione 'pt-20' (80px) no <main> do layout.js 
-    */
+    padding-top: 80px; 
+    font-family: 'GothamCustom', sans-serif !important;
   }
 }
 
@@ -67,12 +70,10 @@
    COMPONENTES E UTILITÁRIOS
 ========================= */
 @layer utilities {
-  /* Classe para fundos de seção (como você tinha no bg-agya) */
   .bg-agya-section {
     @apply bg-cover bg-center bg-no-repeat;
   }
 
-  /* Animações otimizadas */
   .reveal-up {
     animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }

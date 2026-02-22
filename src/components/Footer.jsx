@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -18,17 +19,15 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Menu Rápido */}
+          {/* Menu Rápido - LINKS CORRIGIDOS */}
           <div className="md:col-span-2">
             <ul className="space-y-3 font-black text-sm uppercase tracking-widest text-black">
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Início</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Sobre</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Artistas</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">DJs</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Live Acts</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Lançamentos</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Tutoriais</a></li>
-              <li><a href="#" className="hover:opacity-50 transition-opacity">Contato</a></li>
+              <li><Link href="/" className="hover:opacity-50 transition-opacity">Início</Link></li>
+              <li><Link href="/#sobre" className="hover:opacity-50 transition-opacity">Sobre</Link></li>
+              <li><Link href="/artists" className="hover:opacity-50 transition-opacity">Artistas</Link></li>
+              <li><Link href="/#lancamentos" className="hover:opacity-50 transition-opacity">Lançamentos</Link></li>
+              <li><a href="https://www.psychedeliclab.com.br/" target="_blank" className="hover:opacity-50 transition-opacity">Tutoriais</a></li>
+              <li><Link href="/#contato" className="hover:opacity-50 transition-opacity">Contato</Link></li>
             </ul>
           </div>
 
@@ -40,15 +39,15 @@ export default function Footer() {
                 <a href="mailto:contato@agyasounds.com" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
                    <span className="text-xl">📧</span> E-mail
                 </a>
-                <a href="#" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
-                   <span className="text-xl">📋</span> Bookings
+                <a href="https://www.instagram.com/agyasounds/" target="_blank" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
+                   <span className="text-xl">📸</span> Instagram
                 </a>
               </div>
             </div>
 
             <div>
               <h4 className="font-black text-sm mb-6 uppercase tracking-widest text-black">Links</h4>
-              <a href="#" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
+              <a href="https://open.spotify.com/user/agyasounds" target="_blank" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
                  <span className="text-2xl">🎧</span> Oficial Playlist
               </a>
             </div>
@@ -60,7 +59,9 @@ export default function Footer() {
       <div className="w-full bg-black py-8 px-6">
         <div className="mx-auto max-w-[1100px] flex flex-col md:flex-row justify-between items-center text-[11px] font-bold text-white uppercase tracking-[0.2em] gap-4">
           <span>@agya sounds all rights reserved 2026</span>
-          <span>Web Design by: Abner Simão Design (instagram)</span>
+          <Link href="https://www.instagram.com/abner_simao/" target="_blank" className="hover:text-violet-400 transition-colors">
+            Web Design by: Abner Simão Design
+          </Link>
         </div>
       </div>
     </footer>
