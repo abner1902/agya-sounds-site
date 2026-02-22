@@ -3,7 +3,7 @@
 
 @plugin "tailwindcss-animate";
 
-@theme {
+@theme inline {
   --color-agya-dark: #000000;
   --color-agya-gray: #1a1a1a;
   --font-sans: var(--font-gotham), ui-sans-serif, system-ui, sans-serif;
