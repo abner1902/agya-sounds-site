@@ -4,37 +4,8 @@
 @plugin "tailwindcss-animate";
 
 /* =========================
-   DECLARAÇÃO DAS FONTES GOTHAM (.ttf)
+   VARIÁVEIS DE TEMA
 ========================= */
-@font-face {
-  font-family: 'GothamCustom';
-  src: url('/fonts/GothamBold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GothamCustom';
-  src: url('/fonts/GothamMedium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GothamCustom';
-  src: url('/fonts/GothamBlack.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GothamCustom';
-  src: url('/fonts/GothamLight.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Definição de Variáveis de Tema */
 @theme {
   --color-agya-dark: #000000;
   --color-agya-gray: #1a1a1a;
@@ -44,21 +15,21 @@
    BASE E RESET
 ========================= */
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
     @apply border-white/10;
-    font-family: var(--font-gotham), sans-serif;
+    font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif !important;
   }
 
   html {
     scroll-behavior: smooth;
     background-color: #000;
-    font-family: var(--font-gotham), sans-serif;
   }
 
   body {
     background-color: transparent;
-    font-family: var(--font-gotham), sans-serif;
     @apply text-white antialiased selection:bg-white/20;
     overflow-x: hidden;
     line-height: 1.6;
