@@ -45,24 +45,24 @@
 ========================= */
 @layer base {
   * {
-    @apply border-white/10;
     box-sizing: border-box;
-    /* Removido o !important daqui para não quebrar estilos inline de background */
-    font-family: 'GothamCustom', sans-serif;
+    @apply border-white/10;
+    font-family: var(--font-gotham), sans-serif;
   }
 
   html {
     scroll-behavior: smooth;
-    background-color: #000; /* Cor de segurança no nível mais baixo */
+    background-color: #000;
+    font-family: var(--font-gotham), sans-serif;
   }
 
   body {
-    background-color: transparent; /* Deixa a imagem do <main> transparecer */
+    background-color: transparent;
+    font-family: var(--font-gotham), sans-serif;
     @apply text-white antialiased selection:bg-white/20;
     overflow-x: hidden;
     line-height: 1.6;
-    padding-top: 80px; 
-    font-family: 'GothamCustom', sans-serif !important;
+    padding-top: 80px;
   }
 }
 
