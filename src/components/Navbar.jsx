@@ -19,7 +19,7 @@ export default function Navbar() {
     
     // Adicionamos "/" antes do "#" para funcionar fora da Home
     if (item === 'Streaming') return '/#music'; 
-    if (item === 'Contato') return '/#contato'; 
+    if (item === 'Contato') return '/contact'; 
     if (item === 'Artistas') return '/artists'; // Se você quiser ir para a galeria geral
     
     const id = item.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");

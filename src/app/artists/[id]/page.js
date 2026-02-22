@@ -23,7 +23,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : "s592tz0wLr0";
   };
-  const videoId = getYoutubeEmbed(artist.latestRelease?.videoUrl);
+  const videoId = getYoutubeEmbed(artist.latestRelease?.embedUrl);
 
   return (
     <main className="min-h-screen text-white font-['GothamCustom',_sans-serif] relative">
