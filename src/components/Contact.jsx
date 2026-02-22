@@ -103,7 +103,7 @@ export default function Contact() {
           <button
             onClick={handleSubmit}
             disabled={status === 'loading'}
-            className="w-64 h-14 bg-slate-900 rounded-xl text-white text-[16px] font-medium uppercase tracking-widest hover:bg-slate-800 transition-all self-end disabled:opacity-50"
+            className="w-full md:w-64 h-14 bg-slate-900 rounded-xl text-white text-[16px] font-medium uppercase tracking-widest hover:bg-slate-800 transition-all md:self-end disabled:opacity-50"
           >
             {status === 'loading' ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}
           </button>
