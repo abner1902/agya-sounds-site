@@ -48,9 +48,9 @@ export const allArtists = [
     }
   },
   {
-    id: 'andura',
-    name: 'Andura',
-    role: 'DJ SET',
+    id: 'andurá',
+    name: 'Andurá',
+    role: 'PRODUTOR',
     image: 'andura_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
@@ -103,7 +103,7 @@ export const allArtists = [
   },
   {
     id: 'curuja',
-    name: 'Curúja',
+    name: 'Curuja',
     role: 'PRODUTOR',
     image: 'curuja_photo.jpg',
     countryFlag: '/flags/brazil.svg',

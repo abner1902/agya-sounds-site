@@ -51,10 +51,10 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
         <div className="flex flex-col items-center mb-20 text-center">
           <div className="flex items-center gap-6 justify-center flex-wrap">
-            <h1 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
+           <h1 className="text-[32px] md:text-[40px] font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" className="w-12 h-8 object-cover rounded-sm shadow-lg" alt="BR" />
           </div>
-          <p className="text-2xl uppercase tracking-[0.5em] text-zinc-400 mt-6 italic font-medium">{artist.role || 'PRODUTOR'}</p>
+          <p className="text-[14px] uppercase tracking-[0.2em] text-zinc-400 mt-2 italic font-medium">{artist.role || 'PRODUTOR'}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">

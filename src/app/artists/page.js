@@ -38,9 +38,9 @@ export default function ArtistsPage() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
       </div>
 
-      <div className="max-w-7xl mx-auto py-8 md:py-20 px-6 relative z-10">
+      <div className="max-w-7xl mx-auto py-8 md:py-10 px-6 relative z-10">
         <h1 className="text-[32px] md:text-[40px] font-black text-center mb-6 uppercase italic tracking-tighter leading-none">CONHEÇA OS ARTISTAS</h1>
-        <p className="text-zinc-400 text-center mb-8 md:mb-20 max-w-2xl mx-auto text-[16px] md:text-xl font-medium leading-relaxed normal-case tracking-widest italic">
+        <p className="text-zinc-400 text-center mb-8 md:mb-10 max-w-2xl mx-auto text-[16px] md:text-xl font-medium leading-relaxed normal-case tracking-widest italic">
           AGYA SOUNDS apresenta produtores e DJs do casting para eventos de psytrance focados em psicodelia avançada.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
