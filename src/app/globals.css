@@ -47,3 +47,7 @@
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* Force Gotham after third-party CSS */
+html body * {
+  font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif !important;
+}
