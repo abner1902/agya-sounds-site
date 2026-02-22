@@ -50,7 +50,7 @@ export default function Navbar() {
                 <Link
                   href={getHref(item)}
                   target={item === 'Tutoriais' ? "_blank" : "_self"}
-                  className="text-[14px] font-bold uppercase tracking-[0.1em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100"
+                  className="text-[13px] font-bold uppercase tracking-[0.1em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100"
                 >
                   {item}
                 </Link>
