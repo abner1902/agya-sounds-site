@@ -1,36 +1,18 @@
-    // src/app/layout.js
-    import './globals.css';
-    import LocalFont from 'next/font/local';
-    import Navbar from '@/components/Navbar'; // <<-- ESTA LINHA IMPORTA SUA NAVBAR!
+import './globals.css';
+import Navbar from '@/components/Navbar';
 
-    const gotham = LocalFont({
-  src: [
-    { path: '../../fonts/GothamLight.ttf', weight: '300', style: 'normal' },
-    { path: '../../fonts/GothamMedium.ttf', weight: '500', style: 'normal' },
-    { path: '../../fonts/GothamBold.ttf', weight: '700', style: 'normal' },
-    { path: '../../fonts/GothamBlack.ttf', weight: '900', style: 'normal' },
-    { path: '../../fonts/GothamThin.ttf', weight: '100', style: 'normal' },
-    { path: '../../fonts/GothamXLight.ttf', weight: '200', style: 'normal' },
-    { path: '../../fonts/GothamBoldItalic.ttf', weight: '700', style: 'italic' },
-    { path: '../../fonts/GothamLightItalic.ttf', weight: '300', style: 'italic' },
-    { path: '../../fonts/GothamMediumItalic.ttf', weight: '500', style: 'italic' },
-  ],
-  variable: '--font-gotham',
-  display: 'swap',
-});
+export const metadata = {
+  title: "Agya Sounds | Frequências do Terceiro Olho",
+  description: "Gravadora de música psicodélica experimental dedicada a expandir a percepção humana.",
+};
 
-    export const metadata = {
-      title: "Agya Sounds | Frequências do Terceiro Olho",
-      description: "Gravadora de música psicodélica experimental dedicada a expandir a percepção humana.",
-    };
-
-    export default function RootLayout({ children }) {
-      return (
-        <html lang="pt-br" className={`${gotham.variable} scroll-smooth`}> 
-          <body className={`${gotham.className}`} suppressHydrationWarning> 
-            <Navbar /> {/* <<-- SUA NAVBAR É RENDERIZADA AQUI, APARECENDO EM TODAS AS PÁGINAS! */}
-            {children}
-          </body>
-        </html>
-      );
-    }
+export default function RootLayout({ children }) {
+  return (
+    <html lang="pt-br" className="scroll-smooth">
+      <body suppressHydrationWarning>
+        <Navbar />
+        {children}
+      </body>
+    </html>
+  );
+}
