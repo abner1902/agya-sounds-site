@@ -82,7 +82,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
               <a 
                 href={artist.latestRelease?.bandcampUrl || "#"} 
                 target="_blank" 
-                className="w-64 h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-xl font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
+                className="w-full md:w-64 h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base md:text-xl font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
               >
                 last release
               </a>
