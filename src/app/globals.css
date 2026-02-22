@@ -3,11 +3,38 @@
 
 @plugin "tailwindcss-animate";
 
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-agya-dark: #000000;
   --color-agya-gray: #1a1a1a;
-  --font-sans: var(--font-gotham), ui-sans-serif, system-ui, sans-serif;
-  --default-font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -16,16 +43,17 @@
   *::after {
     box-sizing: border-box;
     @apply border-white/10;
-    font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif !important;
   }
 
   html {
     scroll-behavior: smooth;
     background-color: #000;
+    font-family: 'Gotham', sans-serif;
   }
 
   body {
     background-color: transparent;
+    font-family: 'Gotham', sans-serif;
     @apply text-white antialiased selection:bg-white/20;
     overflow-x: hidden;
     line-height: 1.6;
@@ -33,11 +61,14 @@
   }
 }
 
+html body * {
+  font-family: 'Gotham', sans-serif !important;
+}
+
 @layer utilities {
   .bg-agya-section {
     @apply bg-cover bg-center bg-no-repeat;
   }
-
   .reveal-up {
     animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
@@ -46,8 +77,4 @@
 @keyframes reveal {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-/* Force Gotham after third-party CSS */
-html body * {
-  font-family: var(--font-gotham), ui-sans-serif, system-ui, sans-serif !important;
 }
