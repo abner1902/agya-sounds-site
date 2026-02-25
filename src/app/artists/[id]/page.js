@@ -52,7 +52,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
         <div className="flex flex-col items-center mb-20 text-center">
           <div className="flex items-center gap-6 justify-center flex-wrap">
            <h1 className="text-[32px] md:text-[40px] font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" className="w-12 h-8 object-cover rounded-sm shadow-lg" alt="BR" />
+            <img src={`/images${artist.countryFlag}`} className="w-8 h-8 object-cover rounded-full shadow-lg" alt={artist.countryName} />
           </div>
           <p className="text-[14px] uppercase tracking-[0.2em] text-zinc-400 mt-2 italic font-medium">{artist.role || 'PRODUTOR'}</p>
         </div>
@@ -84,7 +84,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
                 target="_blank" 
                 className="w-full md:w-64 h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base md:text-xl font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
               >
-                last release
+                {artist.role === 'DJ SET' ? 'OUÇA AGORA' : 'LAST RELEASE'}
               </a>
             </div>
           </div>

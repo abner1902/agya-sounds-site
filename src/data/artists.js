@@ -83,6 +83,23 @@ export const allArtists = [
     embedUrl: 'https://www.youtube.com/embed/cfCr4kfr_4o?si=s-2XY9y4Qcy1PiaB',
   }
 },
+{
+  id: 'clara',
+  name: 'DJ Clara',
+  role: 'DJ SET',
+  image: 'clara_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje baseada em São Paulo. Desde o primeiro contato com o psytrance, a energia da música se manifestou em sons imersivos, noturnos e introspectivos, com elementos que celebram a força ancestral e a conexão com a Terra. Clara já se apresentou no Jacundá Festival, dentro da Amazônia, e no Universo Paralello Festival na Bahia, no palco 303. Identificada com o ideal da Agya Sounds, a parceria é certa — e em breve estreia oficialmente na Agya Sounds Series.`,  instagram: 'https://www.instagram.com/lucyd.clara/',
+  soundcloud: 'https://soundcloud.com/lucydclara7',
+  spotify: 'https://open.spotify.com/playlist/5r9KrwsHepDB0EHVcsttif?si=3f1f3a9fa198445a',
+  youtube: null,
+  latestRelease: {
+    title: 'Ouça Agora',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/',
+    embedUrl: 'https://www.youtube.com/embed/94grYv0RQXk?si=AQNb1wwkMCavNBAW',
+  }
+},
     {
   id: 'corubamba',
   name: 'Corubamba',
@@ -135,6 +152,24 @@ export const allArtists = [
     title: 'Exploring The Inner World EP',
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/exploring-the-inner-world-ep',
     embedUrl: 'https://www.youtube.com/embed/jta3OUnaVgE?si=6pX0RDYbMz5U_Dhh',
+  }
+},
+{
+  id: 'eklypto',
+  name: 'Eklypto',
+  role: 'DJ SET',
+  image: 'eklypto_photo.jpg',
+  countryFlag: '/flags/italy.svg',
+  countryName: 'Itália',
+  bio: `Eklypto nasceu em 1988 na Itália e aos 15 anos se apaixonou pela arte do DJ, atraído pela música psicodélica e pelo ambiente que a cerca. Autodidata na mixagem, construiu uma longa jornada em busca de seu flow pessoal, transitando por diferentes gêneros até encontrar sua identidade no full-on underground, forest noturno e darkpsy. Com seleções continuamente atualizadas e pesquisadas, Eklypto traz para a Agya Sounds uma perspectiva europeia única dentro da cena psicodélica.`,
+  instagram: 'https://www.instagram.com/eklypto_/',
+  soundcloud: 'https://soundcloud.com/eklypto-88',
+  spotify: 'https://open.spotify.com/user/31n6d7ekc4nnm2hvnhnicba2kc34?si=722ead5440f54070',
+  youtube: null,
+  latestRelease: {
+    title: 'Ouça Agora',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/',
+    embedUrl: 'https://www.youtube.com/embed/_YjHxY07c9E?si=_Qay9cZdwcDvy5ME&start=2',
   }
 },
   {
@@ -279,6 +314,24 @@ export const allArtists = [
     title: 'Psychedelic Rhythm of Consciousness EP',
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/ep-psychedelic-rhythm-of-consciousness',
     embedUrl: 'https://www.youtube.com/embed/VZiXDJLWtqA?si=5loVO9uJaj8OPW-v&start=17',
+  }
+},
+{
+  id: 'kougui',
+  name: 'Kougui',
+  role: 'PRODUTOR',
+  image: 'kougui_photo.jpg',
+  countryFlag: '/flags/colombia.svg',
+  countryName: 'Colômbia',
+  bio: `Kougui é o projeto de Jorge, produtor colombiano que nasce de experiências psicodélicas e espirituais profundas, inspirado pelas tribos indígenas da Colômbia e América do Sul. Com atmosferas escuras, texturas espaciais, elementos tribais e sons experimentais, Kougui propõe um verdadeiro ritual de frequências dentro da Agya Sounds — uma jornada sonora que conecta o ancestral ao psicodélico.`,
+  instagram: 'https://www.instagram.com/kougui_music/',
+  soundcloud: 'https://soundcloud.com/user-980942696',
+  spotify: 'https://open.spotify.com/intl-pt/artist/1j0FWRvFUbfMcgv6jP8aCZ?si=tf-gWSyJTKCid6mO294RIg',
+  youtube: null,
+  latestRelease: {
+    title: 'Loonatic Boom',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/track/loonatic-boom',
+    embedUrl: 'https://www.youtube.com/embed/x_T3htEm-WU?si=xDjymJK4YFsndlaB',
   }
 },
   {
