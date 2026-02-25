@@ -78,3 +78,34 @@ html body * {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+/* ============================================
+   SCROLL SUAVE E CUSTOMIZAÇÃO
+   ============================================ */
+
+/* Scroll behavior suave para navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Customizar scrollbar (estética dark) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #B1A27A, #8B7355);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #C5B88C, #9A8266);
+}
+
+/* Suavizar transições globais */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}

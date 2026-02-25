@@ -5,7 +5,7 @@ export default function Instagram() {
     { id: 1, url: '/insta-1.jpg', link: 'https://www.instagram.com/p/DT_OeX-EWRw/' },
     { id: 2, url: '/insta-2.jpg', link: 'https://www.instagram.com/p/DSFmCVckTn-/' },
     { id: 3, url: '/insta-3.jpg', link: 'https://www.instagram.com/p/C-iY-VfS6t7/' },
-    { id: 4, url: '/insta-4.jpg', link: 'https://www.instagram.com/p/C7Uo7v9yx9k/' },
+    { id: 4, url: '/insta-4.jpg', link: 'https://www.instagram.com/p/C1Dep5FsnPv/' },
   ];
 
   return (

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer id="contato" className="bg-white pb-10 pt-10">
+    <footer id="contato" className="bg-white pt-10">
       <div className="mx-auto max-w-[1100px] px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 border-t border-gray-100 pt-16 pb-20">
           
@@ -47,7 +47,7 @@ export default function Footer() {
 
             <div>
               <h4 className="font-black text-sm mb-6 uppercase tracking-widest text-black">Links</h4>
-              <a href="https://open.spotify.com/user/agyasounds" target="_blank" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
+              <a href="https://open.spotify.com/playlist/5r9KrwsHepDB0EHVcsttif?si=aaebba30f7a64251" target="_blank" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
                  <span className="text-2xl">🎧</span> Oficial Playlist
               </a>
             </div>

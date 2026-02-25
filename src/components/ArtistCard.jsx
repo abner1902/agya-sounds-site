@@ -1,42 +1,49 @@
-    // src/components/ArtistCard.jsx
-    import Image from 'next/image';
-    import Link from 'next/link';
+'use client';
 
-    export const ArtistCard = ({ artist }) => {
-      return (
-        <Link 
-          href={`/artists/${artist.id}`} 
-          className="group relative block w-full aspect-square overflow-hidden rounded-lg
-                     transform transition-transform duration-300 ease-in-out hover:scale-[1.03]" // Efeito zoom de leve
-        >
-          <Image
-            src={`/images/artists/${artist.image}`} // Caminho da imagem na pasta public
-            alt={`Foto de ${artist.name}`}
-            fill // Preenche o contêiner pai
-            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" // Otimização responsiva
-            className="object-cover transition-opacity duration-300 ease-in-out opacity-90 group-hover:opacity-100" // Opacidade e transição sutil
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col justify-end">
-            <div className="flex items-center justify-between">
-              <h3 className="text-white text-lg font-bold tracking-tight uppercase">
-                {artist.name}
-              </h3>
-              {artist.countryFlag && (
-                // ...
-<Image
-  src={`/images${artist.countryFlag}`} // <<-- CORREÇÃO: Adicionado /images no início do caminho
-  alt={`Bandeira do ${artist.countryName}`}
-// ...
-                  width={24}
-                  height={16}
-                  className="rounded shadow-md"
-                />
-              )}
-            </div>
-            <p className="text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">
-              {artist.role}
-            </p>
-          </div>
-        </Link>
-      );
-    };
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import { useState } from 'react';
+
+export const ArtistCard = ({ artist }) => {
+  const router = useRouter();
+  const [clicked, setClicked] = useState(false);
+
+  const artistUrl = '/artists/' + artist.id;
+  const imageSrc = '/images/artists/' + artist.image;
+  const flagSrc = '/images' + artist.countryFlag;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    if (clicked) return;
+    setClicked(true);
+    setTimeout(() => {
+      router.push(artistUrl);
+    }, 500);
+  };
+
+  const cardStyle = {
+    transition: 'transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.5s ease',
+    transform: clicked ? 'scale(1.18)' : 'scale(1)',
+    opacity: clicked ? 0 : 1,
+  };
+
+  const imageStyle = {
+    transition: 'transform 0.5s ease',
+    transform: clicked ? 'scale(1.08)' : 'scale(1)',
+  };
+
+  return (
+    <a href={artistUrl} onClick={handleClick} className="group relative block w-full aspect-square overflow-hidden rounded-lg cursor-pointer" style={cardStyle}>
+      <Image src={imageSrc} alt={'Foto de ' + artist.name} fill sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover opacity-90 group-hover:opacity-100" style={imageStyle} />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col justify-end">
+        <div className="flex items-center justify-between">
+          <h3 className="text-white text-lg font-bold tracking-tight uppercase">{artist.name}</h3>
+          {artist.countryFlag && (
+            <Image src={flagSrc} alt={'Bandeira de ' + artist.countryName} width={24} height={16} className="rounded shadow-md" />
+          )}
+        </div>
+        <p className="text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">{artist.role}</p>
+      </div>
+    </a>
+  );
+};
