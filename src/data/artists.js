@@ -14,7 +14,7 @@ export const allArtists = [
             Desde então, seu interesse pela música eletrônica só vem crescendo. 
             Esse interesse o levou ao psytrance, que se tornou sua grande paixão.
 
-            Ele começou a tocar como DJ em 2009 e, alguns anos depois, iniciou sua jornada como produtor, em 2012.
+            Ele começou a tocar como DJ em 2009 e, some anos depois, iniciou sua jornada como produtor, em 2012.
 
             Seu estilo pode ser definido como profundo, energético e alucinante, com linhas de baixo marcantes, grooves e ritmos intensos, atmosferas orgânicas e sons em alta definição.
 
@@ -22,7 +22,8 @@ export const allArtists = [
     instagram: 'https://www.instagram.com/absycho_vajrapani',
     soundcloud: 'https://soundcloud.com/absycho',
     spotify: 'https://open.spotify.com/intl-pt/artist/3hrWMNQVpBVhWkXOnhwui3?si=NeS257PVS2KGjAVrK3JdgQ',
-    youtube: null, // Como combinado, não precisamos do link do canal aqui, pois o embedUrl já lida com o vídeo
+    mediaKitUrl: 'https://drive.google.com/drive/u/0/folders/1uqszjvOVWhQYeNtywSYoMSONFCya-_70',
+    youtube: null,
     latestRelease: {
       title: 'Pineal Vision EP',
       bandcampUrl: 'https://agyasounds.bandcamp.com/album/pineal-vision-ep',
@@ -85,7 +86,7 @@ export const allArtists = [
 },
 {
   id: 'clara',
-  name: 'DJ Clara',
+  name: 'Clara',
   role: 'DJ SET',
   image: 'clara_photo.jpg',
   countryFlag: '/flags/brazil.svg',
@@ -353,95 +354,113 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
   }
 },
   {
-    id: 'madara',
-    name: 'Madara',
-    role: 'PRODUTOR',
-    image: 'madara_photo.jpg',
-    countryFlag: '/flags/brazil.svg',
-    countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/madara/',
-    soundcloud: 'https://soundcloud.com/madara',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@madara',
-    latestRelease: {
-      title: 'Psychedelic Forest',
-      bandcampUrl: '#',
-      embedUrl: null,
-    }
-  },
+  id: 'madara',
+  name: 'Madara',
+  role: 'PRODUTOR',
+  image: 'madara_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Madara é um DJ e produtor de São Paulo que aprendeu a tocar em 2009 com Marcelo Floresta, um dos grandes nomes da cena trance. Começou a criar seus próprios sons em 2014, desenvolvendo um projeto com sintetizadores, texturas e ambientes que se encaixam em grooves em constante evolução. Sempre inovador, com um som noturno psicodélico e hipnotizante, apresenta performances envolventes, conduzindo a pista com muita energia e psicodelia forest dentro da Agya Sounds.`,
+  instagram: 'https://www.instagram.com/madara/',
+  soundcloud: 'https://soundcloud.com/madaradj',
+  spotify: 'https://open.spotify.com/intl-pt/artist/16X1M2vcibhlcfV9iuqZ0t?si=XADpaHlORYyTyjJn5jttGw',
+  youtube: null,
+  latestRelease: {
+    title: 'Photons',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/track/madara-photons-150bpm',
+    embedUrl: 'https://www.youtube.com/embed/biprxiOLwY8?si=GNYxCH4zXu5ZLyma',
+  }
+},
   {
-    id: 'modulsector',
-    name: 'Modulsector',
-    role: 'PRODUTOR',
-    image: 'modulsector_photo.jpg',
-    countryFlag: '/flags/brazil.svg',
-    countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/modulsector/',
-    soundcloud: 'https://soundcloud.com/modulsector',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@modulsector',
-    latestRelease: {
-      title: 'Modular Dreams',
-      bandcampUrl: '#',
-      embedUrl: null,
-    }
-  },
+  id: 'modulsector',
+  name: 'Modulsector',
+  role: 'DJ SET',
+  image: 'modulsector_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Modulsector é o projeto de Guilherme Correia, nascido em Rio Claro, interior de São Paulo, em 1995. Começou sua carreira como DJ Set em 2012, vindo do underground da música eletrônica e se adaptando às novas vertentes que foram surgindo em seu caminho. Amante da música noturna, mescla suas vertentes preferidas — Forest, Twilight e Dark — trazendo composições harmônicas e melódicas. Hoje estudante de produção, busca trazer novidades e inovação para o psytrance dentro da Agya Sounds.`,
+  instagram: 'https://www.instagram.com/modulsector_/',
+  soundcloud: 'https://soundcloud.com/modulsector_forestdark',
+  spotify: 'https://open.spotify.com/intl-pt/artist/1o3zzuhMs9SMVd8heW7bfe?si=Zzq6BwjRSbu1IXaQPCTuEg',
+  youtube: null,
+  latestRelease: {
+    title: 'Ouça Agora',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/v-a-magical-knowledge-compiled-by-agya-sounds-free-download',
+    embedUrl: 'https://www.youtube.com/embed/6llU4QFBuf8?si=I1PYpQF3_4YEMpYC',
+  }
+},
   {
-    id: 'moshhe',
-    name: 'Moshhe',
-    role: 'PRODUTOR',
-    image: 'moshhe_photo.jpg',
-    countryFlag: '/flags/brazil.svg',
-    countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/moshhe/',
-    soundcloud: 'https://soundcloud.com/moshhe',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@moshhe',
-    latestRelease: {
-      title: 'Controlled Chaos',
-      bandcampUrl: '#',
-      embedUrl: null,
-    }
-  },
+  id: 'moshhe',
+  name: 'Moshh3',
+  role: 'PRODUTOR',
+  image: 'moshhe_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Moshh3 Live é o projeto de Moshe Ferreira, veterano da Agya Sounds desde o início. Sua sonoridade é densa, original e cheia de synths poderosos, com características marcantes do Hi-BPM e Darkpsy. Sua influência, experiência e pesquisa ao longo dos anos estão sintetizadas de forma subliminar, resultando em um som híbrido e orgânico que traz uma experiência psicodélica intensa ao dancefloor. Foi o responsável pelo segundo EP lançado pela Agya Sounds, consolidando sua importância no casting da label.`,
+  instagram: 'https://www.instagram.com/moshh3live/',
+  soundcloud: 'https://soundcloud.com/moshh3',
+  spotify: 'https://open.spotify.com/intl-pt/artist/6Zbn7G9iWYGEwrFOlB9YRe?si=cFbLMOMbRD-3Qc9Z6NPYvA',
+  youtube: null,
+  latestRelease: {
+    title: 'Shaman',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/track/moshh3-shaman-170bpm',
+    embedUrl: 'https://www.youtube.com/embed/e8WN5BhNsdM?si=q2ZXP6DUWf5zZwu0',
+  }
+},
   {
-    id: 'muslabu',
-    name: 'Muslabu',
-    role: 'PRODUTOR',
-    image: 'muslabu_photo.jpg', // <<-- CORRIGIDO
-    countryFlag: '/flags/brazil.svg',
-    countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/muslabu/',
-    soundcloud: 'https://soundcloud.com/muslabu',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@muslabu',
-    latestRelease: {
-      title: 'Timeless Journeys',
-      bandcampUrl: '#',
-      embedUrl: null,
-    }
-  },
+  id: 'muslabu',
+  name: 'Muslabu',
+  role: 'PRODUTOR',
+  image: 'muslabu_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Muslabu é o lado mais sombrio, acelerado e noturno de Naga Baba. Natural de Sorocaba, o projeto celebra o encontro entre a floresta, o darkpsy e o twisted psytrance em uma jornada psicodélica intensa. Com o EP "Technological Singularity" lançado pela Agya Sounds, Muslabu consolida sua identidade como um artista de peso na cena, trazendo produções carregadas de atmosferas densas e ritmos hipnóticos que conduzem a pista por territórios sonoros obscuros e fascinantes.`,
+  instagram: 'https://www.instagram.com/muslabulive/',
+  soundcloud: 'https://soundcloud.com/muslabu-live',
+  spotify: 'https://open.spotify.com/intl-pt/artist/4ZtMjJs0O7zrdjFMxEY2bu?si=5IIaGgJ-Q8arAiwN6XeByA',
+  youtube: null,
+  latestRelease: {
+    title: 'Technological Singularity EP',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/technological-singularity-ep',
+    embedUrl: 'https://www.youtube.com/embed/tfZyK8QKQfs?si=pt7LqcZOz6qZcT5P&start=1',
+  }
+},
   {
-    id: 'naga-baba',
-    name: 'Naga Baba',
-    role: 'PRODUTOR',
-    image: 'naga_baba_photo.jpg',
-    countryFlag: '/flags/brazil.svg',
-    countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/nagababa/',
-    soundcloud: 'https://soundcloud.com/nagababa',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@nagababa',
-    latestRelease: {
-      title: 'Serpent Dance',
-      bandcampUrl: '#',
-      embedUrl: null,
-    }
-  },
+  id: 'swampfunker',
+  name: 'Swampfunker',
+  role: 'PRODUTOR',
+  image: 'swampfunker_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Swampfunker é o projeto de Marco Campione, com mais de 5 anos de trajetória na cena psicodélica brasileira. Seu som é um mergulho em galopadas hipnóticas e camadas densas de gordura sonora, conduzindo a pista num weird slide & glide psicodélico único e inconfundível. Já lançou no V.A. Fungus Slug pela Agya Sounds, consolidando uma parceria marcada por identidade sonora forte e personalidade própria.`,
+  instagram: 'https://www.instagram.com/campione_music/',
+  soundcloud: 'https://soundcloud.com/swampfunker',
+  spotify: 'https://open.spotify.com/intl-pt/artist/2Lh71oUU6W961ykYoDsLra?si=-R-Hd5ixQYey_0VvcrA_YQ',
+  youtube: null,
+  latestRelease: {
+    title: 'Swampboy',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/track/swampfunker-swampboy-148bpm',
+    embedUrl: 'https://www.youtube.com/embed/IVeHp5JL4Ko?si=_pN-uffEWy4iP9NM',
+  }
+},
+  {
+  id: 'naga-baba',
+  name: 'Naga Baba',
+  role: 'PRODUTOR',
+  image: 'naga_baba_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Naga Baba é o projeto de Felipe Bernatoviz, um dos pioneiros do prog dark brasileiro. Invocando as chamas do gênero, funde atmosferas sombrias, texturas hipnóticas e melodias orientais à intensidade caótica das grandes cidades. Om Namo Narayan ecoa na pista — o fogo sagrado, a fumaça do chilum, a força de Ganesh e a lua cheia se transformam em transe. Um live que atravessa fronteiras, derrete definições e convida a dançar como se fosse o último ritual sob o cosmos, consolidando sua presença na Agya Sounds.`,
+  instagram: 'https://www.instagram.com/naga_baba_live/',
+  soundcloud: 'https://soundcloud.com/nagababa',
+  spotify: 'https://open.spotify.com/intl-pt/artist/5rjdgxY1T856cB12D3PgWb?si=ppzakDXBQmKpZtQGf0-vKg',
+  youtube: null,
+  latestRelease: {
+    title: 'Ego Death EP',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/ego-death-ep',
+    embedUrl: 'https://www.youtube.com/embed/YBLY5puKDxs?si=7BwtbEXqgN6a6FRa&start=1',
+  }
+},
   {
     id: 'needle-point',
     name: 'Needle Point',
@@ -449,15 +468,15 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'needle_point_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/needlepoint/',
-    soundcloud: 'https://soundcloud.com/needlepoint',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@needlepoint',
+    bio: `Needle Point é o projeto de Guilherme Sanches, médico e produtor musical que mergulha nas profundezas do Psytrance. Iniciado em 2022, o projeto é fruto de um constante aperfeiçoamento técnico e criativo, traduzindo gostos pessoais em frequências de alta precisão. Sua identidade sonora é marcada por atmosferas densas e preenchidas, baterias dinâmicas e basslines que transitam entre o reto e o groovado. Na Agya Sounds, Needle Point entrega uma experiência imersiva onde a ciência da produção e a arte da psicodelia se encontram.`,
+    instagram: 'https://www.instagram.com/needlepoint.live/',
+    soundcloud: 'https://soundcloud.com/needlepointtrance',
+    spotify: 'https://open.spotify.com/intl-pt/artist/6KmMG6qarfM4zZ4SBWeNgw?si=QEE3wV0YTGyJPNB2vbqp7Q',
+    youtube: null,
     latestRelease: {
-      title: 'Precision Groove',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Mitsushiba',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/mitsushiba-single',
+      embedUrl: 'https://www.youtube.com/embed/ERQFjRO7pgc?si=ODH8WtvNFw9lHvF0',
     }
   },
   {
@@ -467,15 +486,15 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'nishio_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/nishio/',
-    soundcloud: 'https://soundcloud.com/nishio',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@nishio',
+    bio: `Nishio é o projeto focado na unificação de tonalidades abstratas e timbres noturnos progressivos. Sua sonoridade é uma construção meticulosa de elementos harmônicos que guiam o ouvinte por uma experiência psicodélica profunda, oscilando entre a insanidade rítmica e a emoção pura. Através de um diálogo complexo entre sintetizadores de ponta e samples conceituais de alto nível de processamento, Nishio entrega um design de som vanguardista. Integrante da Agya Sounds, o projeto redefine o abstrato dentro da cena psicodélica moderna.`,
+    instagram: 'https://www.instagram.com/caio_nishio/',
+    soundcloud: 'https://soundcloud.com/nishiomusic',
+    spotify: 'https://open.spotify.com/intl-pt/artist/0EAqaeyN0BN5jt1tyM1aJa?si=FH1gUd0_RI-KdPuNZdSmpw',
+    youtube: null,
     latestRelease: {
-      title: 'Tribal Future',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Dual Slit',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/track/nishio-dual-slit-152bpm',
+      embedUrl: 'https://www.youtube.com/embed/fIMVLK0Qh-A?si=qw9ealgJ7tiEvkw0&start=1',
     }
   },
   {
@@ -485,15 +504,15 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'ovni_messenger_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/ovnimessenger/',
+    bio: `OVNI Messenger é o projeto de Caio Guilherme, músico maranhense focado nas vertentes experimentais do Darkpsy e Forest. Com forte influência da estética asiática e do design sonoro brasileiro, sua música é marcada por frequências exóticas, elementos espaciais e texturas instrumentais que evocam uma sonoridade alienígena. Através de atmosferas introspectivas, OVNI Messenger busca conectar o público à sua própria essência psicodélica, transformando o dancefloor em um campo de comunicação extra-sensorial.`,
+    instagram: 'https://www.instagram.com/caiio_ovnimessenger/',
     soundcloud: 'https://soundcloud.com/ovnimessenger',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@ovnimessenger',
+    spotify: 'https://open.spotify.com/intl-pt/artist/6FVSGPSQnjcQUmGcE9NSFg?si=9tfRULqcQ-2KS2yDyciI3A',
+    youtube: null,
     latestRelease: {
-      title: 'Interstellar Transmissions',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Resilient Cosmic Frequency',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/resilient-cosmic-frequency-ep',
+      embedUrl: 'https://www.youtube.com/embed/4mexQ_CiXV8?si=26zbT1NQNiJVHQe0&start=1',
     }
   },
   {
@@ -503,15 +522,15 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'padawan_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/padawan/',
-    soundcloud: 'https://soundcloud.com/padawan',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@padawan',
+    bio: `Padawan é o projeto de Beatrice, uma aprendiz da força sonora que encontrou na dança sua primeira conexão com a música. Guiada por uma busca constante pelo conhecimento e evolução técnica, ela mergulha na galáxia dos sons noturnos, explorando graves marcantes e atmosferas psicodélicas densas. Suas seleções vibram energia pura, onde cada faixa carrega uma mensagem oculta a ser desvendada. Integrante da Agya Sounds, Padawan convida o público para uma jornada imersiva através da Força e da psicodelia transcendental.`,
+    instagram: 'https://www.instagram.com/beatrice_giuzio/', // Link baseado no SoundCloud, confirme se é este
+    soundcloud: 'https://soundcloud.com/beatrice-giuzio',
+    spotify: 'https://open.spotify.com/playlist/5r9KrwsHepDB0EHVcsttif?si=7a2a615513674e87',
+    youtube: null,
     latestRelease: {
-      title: 'Cosmic Apprentice',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'V/A The Digital Pirates',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/v-a-the-digital-pirates-compiled-by-absycho-gignere',
+      embedUrl: 'https://www.youtube.com/embed/RzN4xYQJsMw?si=6Bze5-Mj9FdBS1vv&start=2',
     }
   },
   {
@@ -521,17 +540,35 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'rizomorf_photo.jpg',
     countryFlag: '/flags/hungary.svg',
     countryName: 'Hungria',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/rizomorf_music/',
+    bio: `Diretamente da Hungria, Rizomorf é o projeto que explora as conexões orgânicas e subterrâneas do Forest e Darkpsy. Inspirado pela complexidade dos sistemas naturais, sua sonoridade apresenta texturas densas, ritmos intrincados e atmosferas que evocam o misticismo das florestas europeias. Como integrante internacional da Agya Sounds, Rizomorf entrega produções de alta complexidade técnica, focadas em criar uma experiência auditiva profunda e visceral para o dancefloor.`,
+    facebook: 'https://www.facebook.com/people/Rizomorf/100057104514468/',
     soundcloud: 'https://soundcloud.com/rizomorf',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@rizomorf',
+    spotify: 'https://open.spotify.com/artist/6S0f3S9YwP6T0k8W8', // Mantive o link do Spotify como você queria
+    youtube: null,
     latestRelease: {
-      title: 'Rooted Resonance',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Space Invaders',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/track/absycho-rizomorf-space-invaders-153bpm-2',
+      embedUrl: 'https://www.youtube.com/embed/9t5RnXm1Vd0?si=BWkE6G9DGKYbx3Yf&start=1',
     }
   },
+  {
+  id: 'sacro-tare',
+  name: 'Sacro Taré',
+  role: 'PRODUTOR',
+  image: 'sacro_tare_photo.jpg',
+  countryFlag: '/flags/brazil.svg',
+  countryName: 'Brasil',
+  bio: `Sacro Taré é o projeto de Kaio Coutinho, Natural do Rio de Janeiro, nascido do reencontro com suas raízes indígenas. Unindo timbres psicodélicos a elementos orgânicos, rituais e sons da floresta, transforma a pista em um território de conexão e celebração da ancestralidade. Mais do que música, cada apresentação é um ritual sonoro que atravessa o sagrado, o ancestral e o contemporâneo, despertando memórias profundas e abrindo caminhos de cura e reconexão. Com uma estética que mistura o tribal, o psicodélico e o indígena, Sacro Taré traz uma experiência intensa onde tradição e tecnologia caminham juntas dentro da Agya Sounds.`,
+  instagram: 'https://www.instagram.com/sacrotare',
+  soundcloud: 'https://on.soundcloud.com/RyNhG881Px3UFDPb6',
+  spotify: 'https://open.spotify.com/intl-pt/artist/4kofGkHeiHfs2dpOldU3wm?si=MKIXsqIsQOKahPE_P2rWYg',
+  youtube: null,
+  latestRelease: {
+    title: 'Nagual',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/track/sacro-tar-nagual-152bpm',
+    embedUrl: 'https://www.youtube.com/embed/KAB9ASM9j7g?si=rre5d0RAPHzGBtCM&start=1',
+  }
+},
   {
     id: 'shankara',
     name: 'Shankara',
@@ -539,87 +576,101 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'shankara_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/shankara/',
-    soundcloud: 'https://soundcloud.com/shankara',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@shankara',
+    bio: `Shankara Live é um projeto de Progressivo Psychedelic formado por Gabriel Mele, músico e produtor nascido em São Paulo/Brasil. Suas produções se resumem em uma frequente mistura de timbres focados na introspecção da consciência humana e na evolução mental, através de sons característicos mesclados com basslines marcantes e ritmos progressivos. O resumo disso tudo é uma grande explosão sonora e uma intensa viagem energética pela obscuridade da música eletrônica underground.
+
+Gabriel formou o projeto Shankara com o Dj C3 em 2011, atualmente segue carreira solo. Trabalhou em diversos eventos na cena, tendo a oportunidade de apresentar seu som em festas em São Paulo e outros Estados brasileiros, como Shivanéris, Respect Lost, Shiva Trance, Shakti São Thomé (MG), Macabre Noize(MG), Chidnéris, Virada Cultural de SP, Magma Trance, Mahadeva Festival entre outros.
+
+Enjoy our music. The really progressive.`,
+    instagram: 'https://www.instagram.com/corubamba/',
+    soundcloud: 'https://soundcloud.com/shankaralive',
+    spotify: 'https://open.spotify.com/intl-pt/artist/5p5GGNgEpazgRGFcYE5jpS?si=Y-BHXxmWT_O0sp2z4yc1fw',
+    youtube: null,
     latestRelease: {
-      title: 'Divine Vibration',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Ritual Experiment EP',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/ritual-experiment-ep-2',
+      embedUrl: 'https://www.youtube.com/embed/Sf8ZkGd7EGU',
     }
   },
   {
-    id: 'shivatva',
-    name: 'Shivatva',
+    id: 'shivattva',
+    name: 'Shivattva',
     role: 'PRODUTOR',
-    image: 'shivatva_photo.jpg',
+    image: 'shivattva_photo.jpg',
     countryFlag: '/flags/ukraine.svg',
-    countryName: 'Ucrânia',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/shivatva_music/',
-    soundcloud: 'https://soundcloud.com/shivatva',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@shivatva',
+    countryName: 'Ucrânia / Goa',
+    bio: `Shivattva é uma verdadeira lenda viva da cena Forest e Darkpsy mundial. Com uma vasta bagagem no psytrance, o artista ucraniano radicado em Goa (Índia) é mestre em guiar ouvintes por jornadas místicas através de frequências sonoras ancestrais. 
+
+Sua sonoridade é um mergulho em reinos encantados, onde batidas pulsantes se harmonizam com os ritmos da natureza. Através de sons xamânicos e melodias hipnóticas, Shivattva convida você a explorar as profundezas da consciência em uma experiência de dança eletrizante. 
+
+Tivemos a honra de lançar pela Agya Sounds o seu álbum completo "Goan Spirit", uma obra que encapsula sua essência transcendental e sua maestria técnica. Deixe a música despertar seu espírito e experimente a magia sonora de Shivattva.`,
+    instagram: 'https://www.instagram.com/shivattva/',
+    soundcloud: 'https://soundcloud.com/shivattva',
+    spotify: 'https://open.spotify.com/intl-pt/artist/24D5clH5J8wt1M2zfskWYJ?si=u-iFXXbBRFCK-G-Xe_d3pw',
+    youtube: null,
     latestRelease: {
-      title: 'Cosmic Awakening',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Goan Spirit (Debut Album)',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/goan-spirit-debut-album',
+      embedUrl: 'https://www.youtube.com/embed/6fkGI0KHM8s',
     }
   },
   {
     id: 'thai',
-    name: 'Thai',
+    name: 'Thaí',
     role: 'DJ SET',
     image: 'thai_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/thai/',
-    soundcloud: 'https://soundcloud.com/thai',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@thai',
+    bio: `Thais Helena, conhecida como DJ Thaí, iniciou sua trajetória na cena psytrance em 2008, vivenciando a cultura intensamente desde então. Em 2019, iniciou seus estudos de mixagem e pesquisa musical, aprofundando-se nas vertentes mais obscuras do psychedelic trance.
+
+O Forest e o Darkpsy são os estilos que elevam sua mente e guiam sua pesquisa. Consequentemente, Thaí vem aprimorando suas técnicas com o intuito de entregar uma experiência imersiva, potente e profundamente psicodélica ao dancefloor.`,
+    instagram: 'https://www.instagram.com/thaidj_/',
+    soundcloud: 'https://soundcloud.com/thaidj',
+    spotify: 'http://googleusercontent.com/spotify.com/3',
+    youtube: null,
     latestRelease: {
-      title: 'Jungle Beat',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Agya Sounds Music',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/music',
+      embedUrl: 'https://www.youtube.com/embed/iLG5NBXZMSE',
     }
   },
   {
     id: 'tibetano',
     name: 'Tibetano',
-    role: 'PRODUTOR',
+    role: 'LIVE',
     image: 'tibetano_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/tibetano/',
-    soundcloud: 'https://soundcloud.com/tibetano',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@tibetano',
+    bio: `Tibetano é o projeto de Thiago, focado nas sonoridades profundas do Forestpsy. Com uma estética que remete ao misticismo e à ancestralidade, seu som é construído sobre atmosferas densas e orgânicas que convidam à introspecção e ao transe. 
+
+Integrante da Agya Sounds, o projeto busca traduzir a essência das florestas em frequências psicodélicas, criando uma jornada sonora rica em texturas e detalhes. Thiago traz para o live uma experiência imersiva, focada na conexão entre o ouvinte e os elementos naturais e espirituais.`,
+    instagram: 'https://www.instagram.com/thiago.tibetano/',
+    soundcloud: 'https://soundcloud.com/tibetanolive',
+    spotify: 'https://open.spotify.com/intl-pt/artist/0LVElXOYkkG3dmV7vIci41?si=QflGzsirSLSbC-DQAvE9dw',
+    youtube: null,
     latestRelease: {
-      title: 'Himalayan Echoes',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'You Are Not A Clown',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/track/you-are-not-a-clown-154bpm',
+      embedUrl: 'https://www.youtube.com/embed/Zgnm76pv8Ng',
     }
   },
   {
     id: 'travis',
     name: 'Travis',
-    role: 'PRODUTOR',
+    role: 'LIVE',
     image: 'travis_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/travis/',
-    soundcloud: 'https://soundcloud.com/travis',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@travis',
+    bio: `Leonardo Carvalho, conhecido como Travis, iniciou sua jornada musical aos 13 anos como guitarrista e baterista autodidata. Com raízes profundas no Rock and Roll Clássico, Grunge e Metal, ele trouxe essa intensidade para a música eletrônica.
+
+Seu projeto é uma evolução natural para expressar seu lado mais obscuro, fundindo o Darkpsy com a estética do Rock. Na Agya Sounds, Travis entrega um live potente, marcado por uma atmosfera densa e riffs psicodélicos que desafiam o convencional no dancefloor.`,
+    instagram: 'https://www.instagram.com/llll.travis.llll/',
+    soundcloud: 'https://soundcloud.com/travislivemusic',
+    spotify: 'https://open.spotify.com/intl-pt/artist/1BreoKwcMwbZeSSjYdLY0N?si=u3MPrq5CRFW_0JhAT1JS-g',
+    youtube: null,
     latestRelease: {
-      title: 'Underground Pulse',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'I Dome',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/track/travis-i-dome-168bpm',
+      embedUrl: 'https://www.youtube.com/embed/D-Fl_GQafbw',
     }
   },
   {
@@ -629,15 +680,17 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'vaidia_photo.jpg',
     countryFlag: '/flags/mexico.svg',
     countryName: 'México',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/vaidia_music/',
+    bio: `Manuel Hernandez é a mente por trás do Vaidia, projeto focado em um estilo psicodélico profundo que explora atmosferas orgânicas e sons futuristas. Criado em 2015, o projeto é uma forma de gratidão ao universo e à natureza, tratando a música como uma meditação ativa e um som devocional. 
+
+Sua sonoridade carrega um sentimento dark que aceita e representa a era atual, transformando-a em amor e conexão através da dança. Em honra a Shiva, Vaidia entrega frequências que buscam a transcendência e o respeito à vida em todas as suas formas.`,
+    instagram: 'https://www.instagram.com/vaidia_darksimha/',
     soundcloud: 'https://soundcloud.com/vaidia',
-    spotify: null,
+    spotify: 'https://open.spotify.com/intl-pt/artist/3OcN4908BjtzfGRPXmtFsk?si=22cA0pAaQ0OP0QpM5vSWRw',
     youtube: 'https://www.youtube.com/@vaidia',
     latestRelease: {
-      title: 'Ancient Rituals',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Universal Smart Life EP',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/universal-smart-life-ep',
+      embedUrl: 'https://www.youtube.com/embed/3sZBKWOC7Oo',
     }
   },
   {
@@ -647,15 +700,19 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'vajrapani_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/vajrapani/',
-    soundcloud: 'https://soundcloud.com/vajrapani',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@vajrapani',
+    bio: `Vajrapani Live é o projeto de DarkPsytrance do DJ e Produtor paulista Abner Simão (Absycho). Inspirado pelas sonoridades das culturas orientais, especialmente tibetanas, Vajrapani é a personificação do poder infinito de Buda. Sua essência é desintegrar os medos e as ignorâncias internas humanas, como ódio, raiva e apego.
+
+Variando entre 160 e 180 BPMs, com ambientações místicas, profundas e orgânicas, o projeto cria um intenso groove de bass que leva o público a um estado meditativo e eufórico. Com estreia internacional no Primitif Festival (Marrocos) em 2022, Vajrapani dita o ritmo da destruição e reconstrução da mente na pista de dança.`,
+    instagram: 'https://www.instagram.com/absycho_vajrapani/',
+    soundcloud: 'https://soundcloud.com/vajrapanilive',
+    spotify: 'https://open.spotify.com/intl-pt/artist/5FKMab1f2Dje1VC8EOznVP?si=TFP9R4cLRXyzfsOz8WhbZA',
+    mediaKitUrl: 'https://drive.google.com/file/d/1QZuXpFeMg8Fpa11tzyM_80_QXwPrg1k1/view', // ADICIONE ESTA LINHA
+    youtube: null,
+    youtube: null,
     latestRelease: {
-      title: 'Thunderbolt Groove',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Over Again',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/track/over-again-162bpm',
+      embedUrl: 'https://www.youtube.com/embed/l6Vs_-JMu0U',
     }
   },
   {
@@ -665,15 +722,16 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'vucsetics_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    bio: `Vucsetics é o projeto formado por Gabriel Accioly, natural de Rio Claro - SP, Brasil. Teve seus primeiros contatos com a música eletrônica quando tinha apenas 12 anos, mais à frente em meados de 2015 começou sua paixão pelo PsyTrance, em decorrer disso começou a tocar e estudar produção musical se formando como produtor pela Aimec Campinas, Universidade Anhembi Morumbi e Belas Artes. Em seu Live, transita pelas nuances do Forest até o DarkPsy, buscando sempre trazer uma atmosfera introspectiva para a pista levando-a a psicodelia. Resgata influências do Rock, Punk Rock, Jazz e DarkWave. Tem em sua bagagem apresentações em festivais como Zuvuya, Respect, Equilibrium, Religare, entre muitos outros pelo estado e Brasil a fora.`,
     instagram: 'https://www.instagram.com/vucsetics/',
     soundcloud: 'https://soundcloud.com/vucsetics',
-    spotify: null,
+    spotify: 'https://open.spotify.com/intl-pt/artist/22cbuYzunBAjYeTZpUhENI?si=1keLji9aTsOJzt0mY79aQQ',
+    mediaKitUrl: null, // Mantido como null para não quebrar o layout e não mostrar o botão
     youtube: 'https://www.youtube.com/@vucsetics',
     latestRelease: {
-      title: 'Dark Progressive',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Abyssal Whispers EP',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/abyssal-whispers-ep',
+      embedUrl: 'https://www.youtube.com/embed/WC9Ih7ghqSA?si=taoPHEd_ZVtUrt_s&start=1479',
     }
   },
   {
@@ -683,33 +741,37 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
     image: 'wave_savage_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+    bio: `Wave Savage explora as frequências da psicodelia moderna, mergulhando em texturas sonoras que desafiam a percepção. Em seu lançamento "Desconstrução Interna EP", o projeto apresenta uma jornada de autoconhecimento através de batidas precisas e atmosferas imersivas, consolidando sua identidade no cenário eletrônico nacional.`,
     instagram: 'https://www.instagram.com/wavesavage/',
     soundcloud: 'https://soundcloud.com/wavesavage',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@wavesavage',
+    spotify: 'https://open.spotify.com/intl-pt/artist/37vQ1E79BA1WnO7KlCb3Cl',
+    youtube: 'https://www.youtube.com/embed/OOVlcYM1bDg',
     latestRelease: {
-      title: 'Raw Power',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Desconstrução Interna EP',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/album/desconstru-o-interna-ep',
+      embedUrl: 'https://www.youtube.com/embed/OOVlcYM1bDg?si=7JlqgVjFrRG5Rq4B&start=1',
     }
   },
   {
-    id: 'will',
-    name: 'Will',
+    id: 'wiill',
+    name: 'WIILL',
     role: 'DJ SET',
-    image: 'will_photo.jpg',
+    image: 'wiill_photo.jpg',
     countryFlag: '/flags/brazil.svg',
     countryName: 'Brasil',
-    bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-    instagram: 'https://www.instagram.com/will/',
-    soundcloud: 'https://soundcloud.com/will',
-    spotify: null,
-    youtube: 'https://www.youtube.com/@will',
+    bio: `Canalizador de atmosferas densas, grooves hipnóticos e paisagens sonoras que tocam direto o subconsciente.
+
+Forjado nas pistas desde os 15 anos, Wilian Xavier cresceu absorvendo as nuances da e-music como quem decifra um idioma ancestral. Em 2022, cruzou um novo portal: passou a explorar profundamente a arte da mixagem, trazendo à tona um repertório rico em camadas, texturas e pulsos que falam com o invisível.
+
+Sob o nome WIILL, ele apresenta um Forest Dark afiado, focado em frequências que desafiam a percepção.`,
+    instagram: 'https://www.instagram.com/wiill_dj/',
+    soundcloud: 'https://soundcloud.com/agyasounds/dj-wiill-agya-sounds-series-04-outubro-2024',
+    spotify: 'https://open.spotify.com/playlist/5r9KrwsHepDB0EHVcsttif?si=c0af684609014757',
+    youtube: 'https://www.youtube.com/@wiill.psy',
     latestRelease: {
-      title: 'Dynamic Spectrum',
-      bandcampUrl: '#',
-      embedUrl: null,
+      title: 'Agya Sounds Series #04',
+      bandcampUrl: 'https://agyasounds.bandcamp.com/',
+      embedUrl: 'https://www.youtube.com/embed/gC1h3WzFo7Q?si=DcqkSW7LDLz4JxDR&start=1',
     }
   },
 ];

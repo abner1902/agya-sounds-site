@@ -1,14 +1,14 @@
 'use client';
 import { use, useEffect } from 'react';
 import { allArtists } from '@/data/artists';
-import { notFound } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ChevronLeft } from 'lucide-react';
 import Footer from '@/components/Footer';
 
 export default function ArtistBioPage({ params: paramsPromise }) {
   const params = use(paramsPromise);
+  const router = useRouter();
   const artist = allArtists.find((a) => a.id === params.id);
   
   useEffect(() => {
@@ -27,7 +27,6 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
   return (
     <main className="min-h-screen text-white font-['GothamCustom',_sans-serif] relative">
-      {/* IMAGEM DE FUNDO REAL (Não é CSS Background) */}
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         <Image 
           src="/bg_artist_page_op_art.png" 
@@ -36,14 +35,16 @@ export default function ArtistBioPage({ params: paramsPromise }) {
           priority 
           className="object-cover opacity-40"
         />
-        {/* Camada de Gradiente para garantir leitura do texto */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
       </div>
 
       <div className="max-w-[1323px] mx-auto px-6 pt-12 pb-24 relative z-10">
-        <Link href="/artists" className="inline-flex items-center gap-2 text-zinc-500 hover:text-white mb-10 uppercase text-[11px] font-bold tracking-[0.4em] transition-all">
+        <button 
+          onClick={() => router.back()} 
+          className="inline-flex items-center gap-2 text-zinc-500 hover:text-white mb-10 uppercase text-[11px] font-bold tracking-[0.4em] transition-all cursor-pointer"
+        >
           <ChevronLeft size={16} /> VOLTAR PARA ARTISTAS
-        </Link>
+        </button>
 
         <div className="relative w-full aspect-[1323/882] rounded-sm overflow-hidden shadow-2xl mb-16 border border-white/5">
           <Image src={`/images/artists/${artist.image}`} alt={artist.name} fill className="object-cover" priority />
@@ -68,21 +69,30 @@ export default function ArtistBioPage({ params: paramsPromise }) {
             </div>
 
             <div className="w-full max-w-[497px] flex items-center justify-between gap-4">
-              <div className="flex gap-6 items-center">
-                <a href={artist.instagram} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" className="w-full h-full object-contain" alt="Instagram" />
-                </a>
-                <a href={artist.soundcloud} target="_blank" className="w-12 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+              <div className="flex gap-4 items-center flex-shrink-0">
+                {artist.instagram ? (
+                  <a href={artist.instagram} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" className="w-full h-full object-contain" alt="Instagram" />
+                  </a>
+                ) : (
+                  <a href={artist.facebook} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" className="w-full h-full object-contain" alt="Facebook" />
+                  </a>
+                )}
+
+                <a href={artist.soundcloud} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
                   <img src="/images/icons/soundcloud_icon.svg" className="w-full h-full object-contain" alt="SoundCloud" />
                 </a>
+                
                 <a href={artist.spotify} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
                   <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" className="w-full h-full object-contain" alt="Spotify" />
                 </a>
               </div>
+
               <a 
                 href={artist.latestRelease?.bandcampUrl || "#"} 
                 target="_blank" 
-                className="w-full md:w-64 h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base md:text-xl font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
+                className="flex-1 max-w-[250px] h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
               >
                 {artist.role === 'DJ SET' ? 'OUÇA AGORA' : 'LAST RELEASE'}
               </a>
