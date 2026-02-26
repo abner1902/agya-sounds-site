@@ -24,7 +24,7 @@ export default function Home() {
     muted
     loop
     playsInline
-    preload="auto"
+    preload="metadata"
     className="absolute inset-0 w-full h-full object-cover hidden md:block z-1"
   >
     <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
@@ -35,7 +35,7 @@ export default function Home() {
     muted
     loop
     playsInline
-    preload="auto"
+    preload="metadata"
     className="absolute inset-0 w-full h-full object-cover md:hidden z-2"
   >
     <source src="/videos/fundo-bg-site-agya_mobile_animation.mp4" type="video/mp4" />
