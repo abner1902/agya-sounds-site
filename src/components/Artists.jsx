@@ -19,7 +19,7 @@ export default function Artists() {
         <p className="mb-11 font-sans text-[20px] md:text-[22px] font-normal leading-[1.5] text-white/80">
           Nossos artistas canalizam frequências do terceiro olho. Cada projeto sonoro é uma jornada espiritual, conectando tecnologia, natureza e consciência expandida.
         </p>
-        <Link href="/artists" className="inline-flex items-center justify-center rounded-xl bg-[#6d28d9] px-10 py-4 font-sans text-[18px] font-bold uppercase text-white transition-all hover:scale-105 hover:bg-[#7c3aed] hover:shadow-[0_0_30px_rgba(109,40,217,0.4)]">
+        <Link href="/artists" className="inline-flex items-center justify-center rounded-xl bg-[#6d28d9] px-10 py-4 font-sans text-[18px] font-bold uppercase text-white transition-all duration-300 ease-out hover:scale-105 active:scale-95 hover:bg-[#7c3aed] hover:shadow-[0_0_30px_rgba(109,40,217,0.4)]">
           SAIBA MAIS
         </Link>
       </div>

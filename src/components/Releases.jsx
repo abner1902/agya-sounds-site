@@ -73,7 +73,7 @@ export default function Releases() {
                 href={release.bandcampUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-block w-full rounded-xl bg-[#6d28d9] px-0 py-[14px] text-center font-sans text-[14px] font-bold uppercase tracking-[0.5px] text-white no-underline transition-all duration-300 hover:scale-[1.03] hover:bg-[#7c3aed] hover:shadow-[0_0_25px_rgba(109,40,217,0.6)]"
+                className="inline-block w-full rounded-xl bg-[#6d28d9] px-0 py-[14px] text-center font-sans text-[14px] font-bold uppercase tracking-[0.5px] text-white no-underline transition-all duration-300 ease-out hover:scale-105 active:scale-95 hover:bg-[#7c3aed] hover:shadow-[0_0_25px_rgba(109,40,217,0.6)]"
               >
                 {release.isFree ? 'FREE DOWNLOAD' : 'DOWNLOAD'}
               </a>

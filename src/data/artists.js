@@ -38,8 +38,8 @@ export const allArtists = [
   countryFlag: '/flags/brazil.svg',
   countryName: 'Brasil',
   bio: `Alien Tunes, conduzido por Aleister Fernandes, é um projeto de psytrance com raízes em Campina Grande - PB. Aleister teve seu primeiro contato com a música eletrônica em 2008 e começou sua jornada no psytrance em 2015, aos 20 anos. Desde então, ele vem mergulhando no estudo e na criação de músicas, sempre aprimorando suas técnicas de produção. Seu som é marcado por timbres orgânicos que transportam o ouvinte para paisagens densas e místicas, onde o surreal se manifesta. As composições evocam atmosferas que lembram florestas sombrias e úmidas, habitadas por seres misteriosos e cheias de misticismo sobrenatural. Esses elementos criam uma sensação de um mundo vivo, pulsante e em constante transformação, onde cada som representa uma conexão entre o orgânico e o imaginário. A música de Alien Tunes é uma fusão entre a natureza e o desconhecido, envolvendo o ouvinte em uma experiência sensorial profunda e única.`,
-  instagram: 'https://www.instagram.com/alientunes/',
-  soundcloud: 'https://soundcloud.com/alientunes',
+  instagram: 'https://www.instagram.com/alientunes.live/',
+  soundcloud: 'https://soundcloud.com/alientuneslive',
   spotify: 'https://open.spotify.com/intl-pt/artist/5pR55BQYkrBtB4OjeHrCfq?si=XT12IoixR0CgYmMaLR6LjA',
   youtube: 'https://www.youtube.com/@alientunes',
   latestRelease: {

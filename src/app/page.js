@@ -16,17 +16,34 @@ export default function Home() {
     <main className="bg-black min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
-      <section className="relative h-screen w-full overflow-hidden -mt-[80px]">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block z-1" 
-          style={{ backgroundImage: "url('/fundo-bg-site-agya.jpg')" }} 
-        />
-        <div 
-          className="absolute inset-0 md:hidden bg-cover bg-center bg-no-repeat z-2"
-          style={{ backgroundImage: "url('/fundo-bg-site-agya_mobile.jpg')" }} 
-        />
-      </section>
+      {/* Hero Section com Vídeo Background */}
+<section className="relative h-screen w-full overflow-hidden -mt-[80px]">
+  
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    className="absolute inset-0 w-full h-full object-cover hidden md:block z-1"
+  >
+    <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
+  </video>
+  
+  <video
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="auto"
+    className="absolute inset-0 w-full h-full object-cover md:hidden z-2"
+  >
+    <source src="/videos/fundo-bg-site-agya_mobile_animation.mp4" type="video/mp4" />
+  </video>
+  
+  <div className="absolute inset-0 bg-black/30 z-3" />
+  
+</section>
 
       <About />
       <Artists />

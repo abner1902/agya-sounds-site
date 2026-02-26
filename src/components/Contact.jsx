@@ -96,14 +96,14 @@ export default function Contact() {
               onChange={handleChange}
               placeholder="Digite sua mensagem"
               rows={6}
-              className="w-full rounded-[10px] bg-white px-4 py-3 text-[14px] text-zinc-500 font-light outline-none resize-none"
+              className="w-full rounded-[10px] bg-white px-4 py-3 text-[14px] text-zinc-500 font-light outline-none resize-y transition-all duration-300 ease-out focus:border-[#6d28d9] focus:ring-2 focus:ring-[#6d28d9]/20 hover:border-zinc-400"
             />
           </div>
 
           <button
             onClick={handleSubmit}
             disabled={status === 'loading'}
-            className="w-full md:w-64 h-14 bg-slate-900 rounded-xl text-white text-[16px] font-medium uppercase tracking-widest hover:bg-slate-800 transition-all md:self-end disabled:opacity-50"
+            className="w-full md:w-64 h-14 bg-slate-900 rounded-xl text-white text-[16px] font-medium uppercase tracking-widest hover:bg-slate-800 transition-all duration-300 ease-out hover:scale-105 active:scale-95 md:self-end disabled:opacity-50"
           >
             {status === 'loading' ? 'ENVIANDO...' : 'ENVIAR MENSAGEM'}
           </button>
