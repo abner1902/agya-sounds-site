@@ -27,7 +27,7 @@ export default function Footer() {
               <li><Link href="/artists" className="hover:opacity-50 transition-opacity">Artistas</Link></li>
               <li><Link href="/#lancamentos" className="hover:opacity-50 transition-opacity">Lançamentos</Link></li>
               <li><a href="https://www.psychedeliclab.com.br/" target="_blank" className="hover:opacity-50 transition-opacity">Tutoriais</a></li>
-              <li><Link href="/#contato" className="hover:opacity-50 transition-opacity">Contato</Link></li>
+              <li><Link href="/contact" className="hover:opacity-50 transition-opacity">Contato</Link></li>
             </ul>
           </div>
 

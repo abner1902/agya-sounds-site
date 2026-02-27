@@ -37,12 +37,14 @@ export const ArtistCard = ({ artist }) => {
       <Image src={imageSrc} alt={'Foto de ' + artist.name} fill sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover opacity-90 group-hover:opacity-100" style={imageStyle} />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col justify-end">
         <div className="flex items-center justify-between">
-          <h3 className="text-white text-lg font-bold tracking-tight uppercase">{artist.name}</h3>
+          {/* Nome do Artista: Reduzido para 14px no mobile, mantido text-lg no desktop */}
+          <h3 className="text-white text-[14px] md:text-lg font-bold tracking-tight uppercase">{artist.name}</h3>
           {artist.countryFlag && (
             <Image src={flagSrc} alt={'Bandeira de ' + artist.countryName} width={24} height={16} className="rounded shadow-md" />
           )}
         </div>
-        <p className="text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">{artist.role}</p>
+        {/* Role: Reduzido para 10px no mobile, mantido text-sm no desktop */}
+        <p className="text-[10px] md:text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">{artist.role}</p>
       </div>
     </a>
   );
