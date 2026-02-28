@@ -36,7 +36,7 @@ export default function MobileMenu({ isOpen, links, labels, getHref, handleClick
           }}
           className="fixed inset-y-0 right-0 z-[55] w-[65%] max-w-[350px] border-l border-white/10 bg-black/80 backdrop-blur-xl shadow-2xl lg:hidden"
         >
-          <nav className="flex h-full flex-col justify-center px-10">
+          <nav className="flex h-full flex-col justify-center px-10 pt-[15px]">
             <ul className="space-y-6">
               {links.map((item, i) => (
                 <motion.li key={item} custom={i} variants={linkVariants}>
