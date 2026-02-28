@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 @plugin "tailwindcss-animate";
 
 @font-face {
@@ -108,4 +110,16 @@ html {
 /* Suavizar transições globais */
 * {
   transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@theme inline {
+  --animate-grid: grid 15s linear infinite;
+  @keyframes grid {
+  0% {
+    transform: translateY(-50%);
+    }
+  100% {
+    transform: translateY(0);
+    }
+  }
 }

@@ -4,6 +4,7 @@ import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 import Link from 'next/link'; 
 import { allArtists } from '@/data/artists';
+import { TextAnimate } from "@/components/magicui/text-animate";
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -15,7 +16,16 @@ export default function Artists() {
       
       {/* Conteúdo Texto */}
       <div className="relative z-10 max-w-[530px]">
-        <h2 className="mb-6 font-sans text-[40px] font-black uppercase text-white tracking-tighter">ARTISTAS</h2>
+        {/* Título animado mantendo suas classes originais */}
+        <TextAnimate 
+          animation="slideUp" 
+          by="word" 
+          as="h2" 
+          className="mb-6 font-sans text-[40px] font-black uppercase text-white tracking-tighter"
+        >
+          ARTISTAS
+        </TextAnimate>
+
         <p className="mb-11 font-sans text-[20px] md:text-[22px] font-normal leading-[1.5] text-white/80">
           Nossos artistas canalizam frequências do terceiro olho. Cada projeto sonoro é uma jornada espiritual, conectando tecnologia, natureza e consciência expandida.
         </p>
@@ -37,7 +47,6 @@ export default function Artists() {
         >
           {allArtists.map((artist) => (
             <SwiperSlide key={artist.id}>
-              {/* O Link agora leva para a GALERIA GERAL (/artists) */}
               <Link href="/artists" className="group block h-full w-full relative cursor-pointer">
                 <Image
                   src={`/images/artists/${artist.image}`}
@@ -46,10 +55,8 @@ export default function Artists() {
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   priority={artist.id === 'absycho'}
                 />
-                {/* Overlay sutil para indicar clique */}
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-all duration-300" />
                 
-                {/* Nome do artista apenas como informação visual */}
                 <div className="absolute bottom-8 left-8 z-20">
                    <span className="bg-black/40 backdrop-blur-md px-4 py-2 rounded-lg text-white font-bold uppercase tracking-widest text-xs border border-white/10 opacity-0 group-hover:opacity-100 transition-opacity">
                      VER CASTING COMPLETO

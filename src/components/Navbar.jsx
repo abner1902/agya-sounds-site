@@ -7,6 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
+// Importação do novo componente mobile que criamos via terminal
+import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -69,10 +71,16 @@ export default function Navbar() {
             <Image src="/logo-menu-agya.png" alt="Agya Sounds" width={180} height={45} className="h-[30px] w-auto lg:h-[45px]" priority />
           </Link>
 
+          {/* Desktop Menu */}
           <ul className="hidden items-center gap-4 lg:flex">
             {links.map((item) => (
               <li key={item}>
-                <Link href={getHref(item)} target={item === 'Tutoriais' ? '_blank' : '_self'} onClick={(e) => handleClick(e, item)} className="text-[13px] font-bold uppercase tracking-[0.1em] text-white/70 transition-all hover:text-[#B1A27A] hover:opacity-100">
+                <Link 
+                  href={getHref(item)} 
+                  target={item === 'Tutoriais' ? '_blank' : '_self'} 
+                  onClick={(e) => handleClick(e, item)} 
+                  className="text-[13px] font-bold uppercase tracking-[0.1em] text-white/70 transition-all hover:text-[#B1A27A]"
+                >
                   {labels[item]}
                 </Link>
               </li>
@@ -83,20 +91,26 @@ export default function Navbar() {
             <a href="https://agyasounds.bandcamp.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white/80 transition-colors hover:text-[#B1A27A]">
               <FaBandcamp />
             </a>
-            <button onClick={() => setOpen(!open)} className="text-3xl text-white lg:hidden">
+            
+            {/* Toggle Button - Z-index alto para ficar acima do menu quando aberto */}
+            <button 
+              onClick={() => setOpen(!open)} 
+              className="relative z-[51] text-3xl text-white lg:hidden"
+            >
               {open ? <FiX /> : <FiMenu />}
             </button>
           </div>
         </div>
       </nav>
 
-      <div className={`fixed inset-0 z-40 flex flex-col items-center justify-center gap-8 bg-black transition-transform duration-500 ${open ? 'translate-x-0' : 'translate-x-full'} lg:hidden`}>
-        {links.map((item) => (
-          <Link key={item} href={getHref(item)} onClick={(e) => handleClick(e, item)} className="text-2xl font-black uppercase tracking-widest text-white hover:text-[#B1A27A]">
-            {labels[item]}
-          </Link>
-        ))}
-      </div>
+      {/* Renderização do Menu Mobile com as props necessárias */}
+      <MobileMenu 
+        isOpen={open} 
+        links={links} 
+        labels={labels} 
+        getHref={getHref} 
+        handleClick={handleClick} 
+      />
     </>
   );
 }

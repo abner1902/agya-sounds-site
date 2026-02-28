@@ -65,7 +65,8 @@ function ArtistsContent() {
             >
               <ChevronLeft size={32}/>
             </button>
-            <span className="text-xl font-bold italic uppercase tracking-widest">Página {pageFromUrl} / {totalPages}</span>
+            <span className="text-lg md:text-xl font-bold italic uppercase tracking-widest">Página {pageFromUrl} / {totalPages}</span>
+
             <button 
               onClick={() => handlePageChange(Math.min(pageFromUrl + 1, totalPages))} 
               className="p-3 bg-zinc-900 rounded-full hover:bg-violet-700 transition-all"

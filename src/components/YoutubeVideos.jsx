@@ -1,5 +1,7 @@
 'use client';
 
+import { TextAnimate } from "@/components/magicui/text-animate";
+
 export default function YoutubeVideos() {
   const videos = [
     {
@@ -29,9 +31,15 @@ export default function YoutubeVideos() {
       <div className="mx-auto max-w-[1300px]">
         
         <div className="mb-16 text-center">
-          <h2 className="font-sans text-[32px] font-black uppercase tracking-tighter text-white md:text-[50px]">
+          {/* Título animado com suas classes originais */}
+          <TextAnimate 
+            animation="slideUp" 
+            by="word" 
+            as="h2" 
+            className="font-sans text-[32px] font-black uppercase tracking-tighter text-white md:text-[50px]"
+          >
             YOUTUBE
-          </h2>
+          </TextAnimate>
         </div>
 
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">

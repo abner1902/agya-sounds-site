@@ -126,7 +126,13 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
   image: 'curuja_photo.jpg',
   countryFlag: '/flags/brazil.svg',
   countryName: 'Brasil',
-  bio: `Curuja é o alter-ego de Lucas Carvallho, jovem DJ e produtor musical natural do nordeste do Brasil. Seu projeto teve início em 2020 e une conversas intensas e dinâmicas de leads tecnológicos a drones e atmosferas profundas e introspectivas, formando um conjunto psicodélico cheio de originalidade. Suas músicas são uma verdadeira loucura explosiva de synths, glitchs, viradas e uma grande variedade no design de som psicodélico. Curuja soma diversos lançamentos nacionais e internacionais, como membro das gravadoras marroquina Magus Nexus, japonesa Goemon Records e da brasileira Agya Sounds.`,
+  bio: `Curuja é o alter ego de Lucas Carvallho, jovem DJ e produtor musical natural do Nordeste do Brasil. Iniciado em 2020, o projeto mergulha em uma psicodelia intensa, combinando leads tecnológicos e dinâmicos com drones densos e atmosferas profundas e introspectivas.
+
+O resultado é uma experiência sonora autêntica, marcada por explosões de synths, glitches precisos, viradas impactantes e um design de som rico em detalhes. Cada faixa transita entre o caos controlado e a imersão hipnótica, revelando uma assinatura sonora própria dentro da psicodelia avançada.
+
+Seu EP “Hype Colírio” marcou sua entrada na Agya Sounds, abrindo caminho para novos lançamentos e consolidando sua presença no catálogo da label. Entre outros trabalhos nacionais e internacionais, Curuja segue expandindo sua identidade sonora.
+
+Confira mais lançamentos no Bandcamp e mergulhe na experiência.`,
   instagram: 'https://www.instagram.com/curujalive/',
   soundcloud: 'https://soundcloud.com/curujalive',
   spotify: 'https://open.spotify.com/intl-pt/artist/3KTDcwTVBt0sBn6pboCkdP?si=bhzlQy1TTGKZ9twNbLOQUA',
@@ -270,7 +276,7 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
   image: 'komfuzium_photo.jpg',
   countryFlag: '/flags/brazil.svg',
   countryName: 'Brasil',
-  bio: `Komfuzium é o projeto autoral de Gesiel, criado no sul do Brasil em 2016. Seu som transita entre o Dark Forest Psicodélico e o Darkpsy, explorando atmosferas densas, timbres metálicos e ritmos progressivos que alcançam até 162 BPMs. Integrante da Agya Sounds, Komfuzium entrega um live intenso e imersivo, marcado por composições inéditas e uma identidade sonora única — uma jornada entre o controle e o caos, criada para romper padrões e envolver a pista.`,
+  bio: `Komfuzium é o projeto autoral de Gesiel, criado no sul do Brasil em 2016. Seu som transita entre o Dark Forest Psicodélico e o Darkpsy, explorando atmosferas densas, timbres metálicos e ritmos progressivos que alcançam até 162 BPMs. Integrante da Agya Sounds, Komfuzium entrega um live intenso e imersivo, e uma identidade sonora única — uma jornada entre o controle e o caos, criada para romper padrões e envolver a pista.`,
   instagram: 'https://www.instagram.com/komfuzium/',
   soundcloud: 'https://soundcloud.com/komfuzium',
   spotify: 'https://open.spotify.com/intl-pt/artist/0GBPP44nVKMlGrZO2BsvUM?si=3xQ3lk7URoO2TyFNs5H0fA',

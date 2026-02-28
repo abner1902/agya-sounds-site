@@ -1,5 +1,7 @@
 'use client';
 
+import { TextAnimate } from "@/components/magicui/text-animate";
+
 export default function Instagram() {
   const posts = [
     { id: 1, url: '/insta-1.jpg', link: 'https://www.instagram.com/p/DT_OeX-EWRw/' },
@@ -11,7 +13,16 @@ export default function Instagram() {
   return (
     <section id="instagram" className="bg-black py-20 px-6">
       <div className="mx-auto max-w-[1200px]">
-        <h2 className="mb-12 text-center font-sans text-3xl font-black uppercase tracking-tighter text-white">Instagram @agya_sounds</h2>
+        {/* Título animado mantendo sua estrutura original com o @ incluso */}
+        <TextAnimate 
+          animation="slideUp" 
+          by="word" 
+          as="h2" 
+          className="mb-12 text-center font-sans text-3xl font-black uppercase tracking-tighter text-white"
+        >
+          Instagram @agya_sounds
+        </TextAnimate>
+
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {posts.map((post) => (
             <a key={post.id} href={post.link} target="_blank" rel="noopener noreferrer" className="group relative aspect-square overflow-hidden rounded-xl">
