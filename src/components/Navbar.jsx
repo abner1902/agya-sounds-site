@@ -7,7 +7,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useSmoothScroll } from '@/hooks/useSmoothScroll';
-// Importação do novo componente mobile que criamos via terminal
 import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
@@ -64,14 +63,14 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 z-50 w-full bg-black/60 backdrop-blur-xl border-b border-white/5">
+      {/* MUDANÇA: z-50 → z-60 para ficar ACIMA do menu */}
+      <nav className="fixed top-0 left-0 z-[60] w-full bg-black/60 backdrop-blur-xl border-b border-white/5">
         <div className="flex h-[80px] w-full items-center justify-between px-6 md:px-12 lg:px-20">
 
           <Link href="/" className="transition-transform hover:scale-105">
             <Image src="/logo-menu-agya.png" alt="Agya Sounds" width={180} height={45} className="h-[30px] w-auto lg:h-[45px]" priority />
           </Link>
 
-          {/* Desktop Menu */}
           <ul className="hidden items-center gap-4 lg:flex">
             {links.map((item) => (
               <li key={item}>
@@ -92,10 +91,9 @@ export default function Navbar() {
               <FaBandcamp />
             </a>
             
-            {/* Toggle Button - Z-index alto para ficar acima do menu quando aberto */}
             <button 
               onClick={() => setOpen(!open)} 
-              className="relative z-[51] text-3xl text-white lg:hidden"
+              className="relative text-3xl text-white transition-colors hover:text-[#B1A27A] lg:hidden"
             >
               {open ? <FiX /> : <FiMenu />}
             </button>
@@ -103,14 +101,14 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Renderização do Menu Mobile com as props necessárias */}
       <MobileMenu 
-        isOpen={open} 
-        links={links} 
-        labels={labels} 
-        getHref={getHref} 
-        handleClick={handleClick} 
-      />
+  isOpen={open} 
+  links={links} 
+  labels={labels} 
+  getHref={getHref} 
+  handleClick={handleClick}
+  onClose={() => setOpen(false)}
+/>
     </>
   );
 }
