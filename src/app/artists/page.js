@@ -18,7 +18,13 @@ function ArtistsContent() {
   // Função para mudar de página atualizando a URL
   const handlePageChange = (newPage) => {
     router.push(`/artists?page=${newPage}`, { scroll: false });
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll suave até o título da galeria (não pro topo absoluto)
+    setTimeout(() => {
+      const galleryTitle = document.querySelector('h1');
+      if (galleryTitle) {
+        galleryTitle.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 100);
   };
 
   useEffect(() => {
