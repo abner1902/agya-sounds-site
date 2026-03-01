@@ -25,8 +25,9 @@ export default function Home() {
           muted
           loop
           playsInline
-          preload="none"
-          className="absolute inset-0 w-full h-full object-cover hidden md:block z-0"
+          preload="auto"
+          poster="/fundo-bg-site-agya.jpg"
+          className="hidden md:block absolute top-0 left-0 w-full h-full object-cover"
         >
           <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
         </video>
@@ -37,10 +38,11 @@ export default function Home() {
           muted
           loop
           playsInline
-          preload="none"
-          className="absolute inset-0 w-full h-full object-cover md:hidden z-0"
+          preload="auto"
+          poster="/fundo-bg-site-agya.jpg"
+          className="block md:hidden absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/videos/fundo-bg-site-agya_mobile_animation.mp4" type="video/mp4" />
+          <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
         </video>
       </section>
 
