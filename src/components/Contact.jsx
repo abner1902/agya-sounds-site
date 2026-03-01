@@ -119,12 +119,15 @@ export default function Contact() {
             </p>
           )}
 
-          <div className="relative w-full h-[200px]">
+          {/* Imagem otimizada para o Lighthouse */}
+          <div className="relative w-full h-[200px] mt-4">
             <Image
               src="/demo-character.png"
               alt="Produtor Agya"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-contain object-center"
+              loading="lazy" 
             />
           </div>
         </div>

@@ -1,24 +1,21 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
 @plugin "tailwindcss-animate";
 
-/* Definição de Variáveis de Tema (Design System)
-  Isso ajuda a manter a consistência de cores em todo o site.
-*/
-@theme {
-  --color-agya-dark: #000000;
-  --color-agya-gray: #1a1a1a;
-  --font-gotham: 'Gotham', sans-serif;
-}
-
-/* =========================
-   FONTES
-========================= */
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamBlack.ttf') format('truetype');
-  font-weight: 900;
+  src: url('/fonts/GothamLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url('/fonts/GothamMedium.ttf') format('truetype');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -31,60 +28,98 @@
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamLight.ttf') format('truetype');
-  font-weight: 300;
+  src: url('/fonts/GothamBlack.ttf') format('truetype');
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
-/* =========================
-   BASE E RESET (Clean Code)
-========================= */
+@theme {
+  --color-agya-dark: #000000;
+  --color-agya-gray: #1a1a1a;
+}
+
 @layer base {
-  * {
-    @apply border-white/10; /* Bordas sutis por padrão */
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
+    @apply border-white/10;
   }
 
   html {
-    /* Removido o font-size: 18px manual para não quebrar o sistema de 'rem' do Tailwind.
-       Se precisar de fontes maiores, usaremos text-lg ou text-xl nos componentes. */
     scroll-behavior: smooth;
+    background-color: #000;
+    font-family: 'Gotham', sans-serif;
   }
 
   body {
-    @apply bg-black text-white antialiased selection:bg-white/20;
-    font-family: var(--font-gotham);
+    background-color: transparent;
+    font-family: 'Gotham', sans-serif;
+    @apply text-white antialiased selection:bg-white/20;
     overflow-x: hidden;
     line-height: 1.6;
-    /* Dica de Designer: Evite padding-top no body. 
-       Se o seu Header é fixo, adicione 'pt-20' (80px) no <main> do layout.js 
-    */
+    padding-top: 80px;
   }
 }
 
-/* =========================
-   COMPONENTES E UTILITÁRIOS
-========================= */
+html body * {
+  font-family: 'Gotham', sans-serif !important;
+}
+
 @layer utilities {
-  /* Classe para fundos de seção (como você tinha no bg-agya) */
   .bg-agya-section {
     @apply bg-cover bg-center bg-no-repeat;
   }
-
-  /* Animações otimizadas */
   .reveal-up {
     animation: reveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 }
 
 @keyframes reveal {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ============================================
+   SCROLL SUAVE E CUSTOMIZAÇÃO
+   ============================================ */
+
+/* Scroll behavior suave para navegação */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Customizar scrollbar (estética dark) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #B1A27A, #8B7355);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #C5B88C, #9A8266);
+}
+
+/* Suavizar transições globais */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+@theme inline {
+  --animate-grid: grid 15s linear infinite;
+  @keyframes grid {
+  0% {
+    transform: translateY(-50%);
+    }
+  100% {
     transform: translateY(0);
+    }
   }
 }

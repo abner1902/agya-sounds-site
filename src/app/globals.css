@@ -5,30 +5,33 @@
 
 @plugin "tailwindcss-animate";
 
+/* ============================================
+   FONTES (Corrigido para WOFF2)
+   ============================================ */
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamLight.ttf') format('truetype');
+  src: url('/fonts/GothamLight.woff2') format('woff2');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamMedium.ttf') format('truetype');
+  src: url('/fonts/GothamMedium.woff2') format('woff2');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamBold.ttf') format('truetype');
+  src: url('/fonts/GothamBold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Gotham';
-  src: url('/fonts/GothamBlack.ttf') format('truetype');
+  src: url('/fonts/GothamBlack.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -80,14 +83,10 @@ html body * {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 /* ============================================
    SCROLL SUAVE E CUSTOMIZAÇÃO
    ============================================ */
-
-/* Scroll behavior suave para navegação */
-html {
-  scroll-behavior: smooth;
-}
 
 /* Customizar scrollbar (estética dark) */
 ::-webkit-scrollbar {
@@ -115,11 +114,11 @@ html {
 @theme inline {
   --animate-grid: grid 15s linear infinite;
   @keyframes grid {
-  0% {
-    transform: translateY(-50%);
+    0% {
+      transform: translateY(-50%);
     }
-  100% {
-    transform: translateY(0);
+    100% {
+      transform: translateY(0);
     }
   }
 }

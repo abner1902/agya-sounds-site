@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image'; // Importação necessária para otimização automática
 
 export default function DemoCard() {
   return (
@@ -15,12 +16,15 @@ export default function DemoCard() {
           className="relative w-full rounded-[40px] bg-[#2D1B94] p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center gap-10 shadow-2xl"
         >
           
-          {/* Imagem do Personagem */}
+          {/* Imagem do Personagem Otimizada */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <img 
+            <Image 
               src="/demo-character.png" 
               alt="Produtor Agya" 
-              className="w-full max-w-[400px] object-contain" 
+              width={400} // Definimos o tamanho base para o Next calcular o aspecto
+              height={400}
+              priority // Carrega mais rápido para o Lighthouse não reclamar
+              className="w-full max-w-[400px] h-auto object-contain" 
             />
           </div>
           

@@ -31,7 +31,6 @@ export default function YoutubeVideos() {
       <div className="mx-auto max-w-[1300px]">
         
         <div className="mb-16 text-center">
-          {/* Título animado com suas classes originais */}
           <TextAnimate 
             animation="slideUp" 
             by="word" 
@@ -45,21 +44,22 @@ export default function YoutubeVideos() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:gap-16">
           {videos.map((video) => (
             <div key={video.id} className="group flex flex-col gap-4">
-              {/* Título */}
               <h3 className="font-sans text-[13px] font-black uppercase tracking-widest text-white pl-2 group-hover:text-[#B1A27A] transition-colors">
                 {video.title}
               </h3>
               
-              {/* Player */}
               <div className="relative aspect-video overflow-hidden rounded-[24px] border border-white/5 bg-zinc-950 transition-all duration-500 group-hover:border-white/20 shadow-2xl">
                 <iframe
                   width="100%"
                   height="100%"
-                  src={`https://www.youtube.com/embed/${video.embedId}?rel=0`}
+                  // Adicionado &loading=1 para reforçar o adiamento do carregamento
+                  src={`https://www.youtube.com/embed/${video.embedId}?rel=0&loading=1`}
                   title={video.title}
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  // O CRÍTICO: Impede que o vídeo carregue antes do usuário chegar nele
+                  loading="lazy"
                   className="absolute inset-0"
                 ></iframe>
               </div>
