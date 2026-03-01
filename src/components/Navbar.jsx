@@ -15,7 +15,7 @@ export default function Navbar() {
   const router = useRouter();
   const { scrollToSection } = useSmoothScroll();
 
-  const links = ['Inicio', 'Sobre', 'Artistas', 'Lancamentos', 'Streaming', 'Instagram', 'Videos', 'Tutoriais', 'Contato'];
+  const links = ['Inicio', 'Sobre', 'Artistas', 'Lancamentos', 'Videos', 'Instagram', 'Streaming', 'Contato', 'Tutoriais'];
 
   const labels = {
     'Inicio': 'Início',
