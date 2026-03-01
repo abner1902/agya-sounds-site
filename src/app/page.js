@@ -40,7 +40,7 @@ export default function Home() {
           playsInline
           preload="auto"
           poster="/fundo-bg-site-agya.jpg"
-          className="block md:hidden absolute top-0 left-0 w-full h-full object-cover"
+          className="block md:hidden absolute top-0 left-0 w-full h-full object-cover object-center"
         >
           <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
         </video>
