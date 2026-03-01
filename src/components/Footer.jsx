@@ -36,7 +36,7 @@ export default function Footer() {
             <div>
               <h4 className="font-black text-sm mb-6 uppercase tracking-widest text-black">Conecte-se com a Agya Sounds</h4>
               <div className="space-y-4">
-                <a href="mailto:contato@agyasounds.com" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
+                <a href="agyasounds@gmail.com" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
                    <span className="text-xl">📧</span> E-mail
                 </a>
                 <a href="https://www.instagram.com/agyasounds/" target="_blank" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">

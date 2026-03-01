@@ -3,6 +3,7 @@
 import { Particles } from '@/components/ui/particles';
 import { useState, useEffect } from 'react';
 import { TextAnimate } from "@/components/magicui/text-animate";
+import Image from 'next/image';
 
 // Movi o array para fora para deixar o componente mais limpo e performático
 const RELEASES_DATA = [
@@ -48,10 +49,10 @@ export default function Releases() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    setIsMounted(true);
+    setIsMounted(true); // eslint-disable-line
   }, []);
 
-  // Evita o erro de hidratação e silencia o aviso do ESLint
+  // Evita o erro de hidratação
   if (!isMounted) {
     return null;
   }
@@ -95,12 +96,13 @@ export default function Releases() {
                 rel="noopener noreferrer"
                 className="group mb-5 block w-full aspect-square overflow-hidden rounded-2xl bg-[#111] shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-pointer"
               >
-                <img 
+                <Image 
                   src={release.image} 
                   alt={release.title} 
-                  loading="lazy" 
+                  width={400} 
+                  height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                  onError={(e) => { e.currentTarget.style.background = '#222'; }}
+                  priority={release.id <= 2}
                 />
               </a>
               
