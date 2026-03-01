@@ -1,4 +1,6 @@
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata = {
   metadataBase: new URL("https://agyasounds.com.br"),
@@ -32,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className="scroll-smooth">
       <body suppressHydrationWarning>
+        <Navbar />
         {children}
       </body>
     </html>
