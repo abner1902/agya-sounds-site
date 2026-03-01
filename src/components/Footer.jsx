@@ -51,9 +51,7 @@ export default function Footer() {
                 <a href="https://www.facebook.com/Agyasounds/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
                   <FaFacebook size={20} className="text-[#1877F2]" /> Facebook
                 </a>
-                <a href="https://www.deezer.com/br/album/719802971" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 font-bold text-sm text-black hover:opacity-60 transition-opacity">
-                  <FaDeezer size={20} className="text-[#EF5466]" /> Agya Effect V.A. — Deezer
-                </a>
+                
               </div>
             </div>
 
