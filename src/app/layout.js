@@ -2,6 +2,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 
 export const metadata = {
+  metadataBase: new URL("https://agyasounds.com.br"),
   title: "Agya Sounds | Frequências do Terceiro Olho",
   description: "Gravadora de música psicodélica experimental dedicada a expandir a percepção humana.",
   icons: {
