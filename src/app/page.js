@@ -16,10 +16,10 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <Navbar />
       
-      {/* Hero Section com Vídeo */}
-      <section className="relative h-screen w-full overflow-hidden -mt-[80px] bg-black flex items-center justify-center">
+      {/* Hero Section com Vídeos Sob Medida */}
+      <section className="relative h-screen w-full overflow-hidden -mt-[80px]">
         
-        {/* Vídeo Desktop - Mantém cover porque a tela é larga */}
+        {/* Vídeo Desktop - Usando os arquivos horizontais */}
         <video
           autoPlay
           muted
@@ -32,17 +32,17 @@ export default function Home() {
           <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
         </video>
 
-        {/* Vídeo Mobile - AGORA RESPEITANDO SUA ARTE SEM CORTES */}
+        {/* Vídeo Mobile - Usando os seus arquivos VERTICAIS sob medida */}
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="auto"
-          poster="/fundo-bg-site-agya.jpg"
-          className="block md:hidden w-full h-auto object-contain"
+          poster="/fundo-bg-site-agya_mobile.jpg"
+          className="block md:hidden absolute top-0 left-0 w-full h-full object-cover"
         >
-          <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
+          <source src="/videos/fundo-bg-site-agya_mobile_animation.mp4" type="video/mp4" />
         </video>
       </section>
 
