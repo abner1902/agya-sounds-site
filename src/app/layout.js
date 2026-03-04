@@ -2,13 +2,13 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Script from 'next/script'; // Importação necessária para o Script otimizado
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL("https://agyasounds.com.br"),
   title: "Agya Sounds | Frequências do Terceiro Olho",
   description: "Somos uma gravadora de música psicodélica experimental dedicada a expandir a percepção humana.",
-  // ... resto do seu metadata (mantido igual)
+  // ... resto do seu metadata mantido igual
 };
 
 const organizationSchema = {
@@ -29,11 +29,14 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         
-        {/* CORREÇÃO DAS FONTES: Força o navegador a baixar as fontes principais IMEDIATAMENTE */}
+        {/* PRELOAD DE FONTES: Agora incluindo a Light que estava causando o maior atraso */}
         <link rel="preload" href="/fonts/GothamBold.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/GothamMedium.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/GothamLight.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         
+        {/* OTIMIZAÇÃO DE CONEXÕES: Google e Spotify (conforme sugerido pelo PageSpeed) */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://image-cdn-fa.spotifycdn.com" />
       </head>
       <body suppressHydrationWarning>
         <Navbar />
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
         {/* GA4 OTIMIZADO */}
         <GoogleAnalytics gaId="G-B4EL5CCMYE" />
 
-        {/* PLAYER AUDIUS OTIMIZADO: strategy="lazyOnload" faz ele carregar apenas quando o resto do site já estiver pronto */}
+        {/* PLAYER AUDIUS OTIMIZADO: strategy="lazyOnload" para não competir com o LCP */}
         <Script 
           src="https://audius.co/player.js" 
           strategy="lazyOnload" 
