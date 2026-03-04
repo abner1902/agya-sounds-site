@@ -68,6 +68,7 @@ export default function MusicSocialMedia() {
         {/* Players Grid */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
           <iframe
+            title="SoundCloud Player - Agya Sounds"
             width="100%"
             height="380"
             scrolling="no"
@@ -77,6 +78,7 @@ export default function MusicSocialMedia() {
             className="rounded-2xl border border-white/5 bg-zinc-950/50 backdrop-blur-sm shadow-2xl"
           />
           <iframe
+            title="Spotify Player - Agya Sounds"
             style={{ borderRadius: '12px' }}
             src="https://open.spotify.com/embed/playlist/5r9KrwsHepDB0EHVcsttif?utm_source=generator&theme=0"
             width="100%"
@@ -85,6 +87,7 @@ export default function MusicSocialMedia() {
             className="rounded-2xl border border-white/5 bg-zinc-950/50 backdrop-blur-sm shadow-2xl"
           />
           <iframe
+            title="Audius Player - Agya Sounds"
             src="https://audius.co/embed/album/agyasounds/goan-spirit-debut-album?flavor=card"
             width="100%"
             height="380"

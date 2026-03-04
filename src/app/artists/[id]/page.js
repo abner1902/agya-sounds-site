@@ -41,6 +41,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
       <div className="max-w-[1323px] mx-auto px-6 pt-12 pb-24 relative z-10">
         <button 
           onClick={() => router.back()} 
+          aria-label="Voltar para lista de artistas"
           className="inline-flex items-center gap-2 text-zinc-500 hover:text-white mb-10 uppercase text-[11px] font-bold tracking-[0.4em] transition-all cursor-pointer"
         >
           <ChevronLeft size={16} /> VOLTAR PARA ARTISTAS
@@ -52,8 +53,15 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
         <div className="flex flex-col items-center mb-20 text-center">
           <div className="flex items-center gap-6 justify-center flex-wrap">
-           <h1 className="text-[32px] md:text-[40px] font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
-            <img src={`/images${artist.countryFlag}`} className="w-8 h-8 object-cover rounded-full shadow-lg" alt={artist.countryName} />
+            <h1 className="text-[32px] md:text-[40px] font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
+            {/* ✅ <img> → <Image> do Next.js para bandeira do país */}
+            <Image
+              src={`/images${artist.countryFlag}`}
+              alt={artist.countryName}
+              width={32}
+              height={32}
+              className="object-cover rounded-full shadow-lg"
+            />
           </div>
           <p className="text-[14px] uppercase tracking-[0.2em] text-zinc-400 mt-2 italic font-medium">{artist.role || 'PRODUTOR'}</p>
         </div>
@@ -65,33 +73,40 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end gap-12">
             <div className="w-full max-w-[497px] aspect-[497/291] rounded-[39px] overflow-hidden border border-white/10 shadow-2xl bg-black">
-              <iframe className="w-full h-full" src={`https://www.youtube.com/embed/${videoId}`} allowFullScreen />
+              <iframe
+                className="w-full h-full"
+                src={`https://www.youtube.com/embed/${videoId}`}
+                title={`${artist.name} - Último lançamento`}
+                allowFullScreen
+              />
             </div>
 
             <div className="w-full max-w-[497px] flex items-center justify-between gap-4">
               <div className="flex gap-4 items-center flex-shrink-0">
                 {artist.instagram ? (
-                  <a href={artist.instagram} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" className="w-full h-full object-contain" alt="Instagram" />
+                  <a href={artist.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                    {/* ✅ <img> externo → <Image> do Next.js */}
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width={40} height={40} className="object-contain" alt="Instagram" />
                   </a>
                 ) : (
-                  <a href={artist.facebook} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" className="w-full h-full object-contain" alt="Facebook" />
+                  <a href={artist.facebook} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                    <Image src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" width={40} height={40} className="object-contain" alt="Facebook" />
                   </a>
                 )}
 
-                <a href={artist.soundcloud} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                  <img src="/images/icons/soundcloud_icon.svg" className="w-full h-full object-contain" alt="SoundCloud" />
+                <a href={artist.soundcloud} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                  <Image src="/images/icons/soundcloud_icon.svg" width={40} height={40} className="object-contain" alt="SoundCloud" />
                 </a>
                 
-                <a href={artist.spotify} target="_blank" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" className="w-full h-full object-contain" alt="Spotify" />
+                <a href={artist.spotify} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
+                  <Image src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width={40} height={40} className="object-contain" alt="Spotify" />
                 </a>
               </div>
 
               <a 
                 href={artist.latestRelease?.bandcampUrl || "#"} 
-                target="_blank" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 max-w-[250px] h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
               >
                 {artist.role === 'DJ SET' ? 'OUÇA AGORA' : 'LAST RELEASE'}

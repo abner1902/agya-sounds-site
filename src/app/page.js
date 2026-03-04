@@ -46,6 +46,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
+          aria-label="Vídeo de fundo Agya Sounds desktop"
           className="hidden md:block absolute top-0 left-0 w-full h-full object-cover z-10"
         >
           <source src="/videos/fundo-bg-site-agya_animation.mp4" type="video/mp4" />
@@ -57,6 +58,7 @@ export default function Home() {
           loop
           playsInline
           preload="auto"
+          aria-label="Vídeo de fundo Agya Sounds mobile"
           className="block md:hidden absolute top-0 left-0 w-full h-full object-cover z-10"
         >
           <source src="/videos/fundo-bg-site-agya_mobile_animation.mp4" type="video/mp4" />

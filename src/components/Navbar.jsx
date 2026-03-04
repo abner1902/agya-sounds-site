@@ -93,7 +93,8 @@ export default function Navbar() {
             
             <button 
               onClick={() => setOpen(!open)} 
-              className="relative text-3xl text-white transition-colors hover:text-[#B1A27A] lg:hidden"
+              aria-label="Abrir menu de navegação"
+className="relative text-3xl text-white transition-colors hover:text-[#B1A27A] lg:hidden"
             >
               {open ? <FiX /> : <FiMenu />}
             </button>
