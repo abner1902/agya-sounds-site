@@ -4,7 +4,6 @@ import { allArtists } from '@/data/artists';
 import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { ChevronLeft } from 'lucide-react';
-import Footer from '@/components/Footer';
 
 export default function ArtistBioPage({ params: paramsPromise }) {
   const params = use(paramsPromise);
@@ -115,7 +114,6 @@ export default function ArtistBioPage({ params: paramsPromise }) {
           </div>
         </div>
       </div>
-      <Footer />
     </main>
   );
 }

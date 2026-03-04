@@ -4,8 +4,6 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { ArtistCard } from '@/components/ArtistCard';
 import { allArtists } from '@/data/artists';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
 import Image from 'next/image';
 
 function ArtistsContent() {
@@ -54,7 +52,6 @@ function ArtistsContent() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
       </div>
 
-      <Navbar />
       <div className="max-w-7xl mx-auto py-8 md:py-10 px-6 relative z-10">
         <h1 className="text-[22px] md:text-[40px] font-black text-center mb-4 uppercase italic tracking-tighter leading-none">CONHEÇA OS ARTISTAS</h1>
         <p className="text-zinc-400 text-center mb-8 md:mb-10 max-w-2xl mx-auto text-[12px] md:text-xl font-medium leading-relaxed normal-case tracking-wide italic">
@@ -84,7 +81,7 @@ function ArtistsContent() {
           </div>
         )}
       </div>
-      <Footer />
+      {/* Footer removido porque já está no layout.js */}
     </div>
   );
 }

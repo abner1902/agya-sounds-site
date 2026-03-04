@@ -8,7 +8,6 @@ import MusicSocialMedia from "@/components/MusicSocialMedia";
 import YoutubeVideos from "@/components/YoutubeVideos";
 import SocialLinks from "@/components/SocialLinks";
 import DemoCard from "@/components/DemoCard";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 
 export default function Home() {
@@ -73,7 +72,6 @@ export default function Home() {
       <MusicSocialMedia />
       <DemoCard />
       <SocialLinks />
-      <Footer />
     </main>
   );
 }
