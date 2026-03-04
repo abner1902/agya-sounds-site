@@ -82,7 +82,7 @@ export default function Footer() {
       <div className="w-full bg-black py-8 px-6">
         <div className="mx-auto max-w-[1100px] flex flex-col md:flex-row justify-between items-center text-[11px] font-bold text-white uppercase tracking-[0.2em] gap-4">
           <span>@agya sounds all rights reserved 2026</span>
-          <Link href="https://www.instagram.com/abner_simao/" target="_blank" rel="noopener noreferrer" className="hover:text-violet-400 transition-colors">
+          <Link href="https://www.instagram.com/abnersimao.design/" target="_blank" rel="noopener noreferrer" className="hover:text-violet-400 transition-colors">
             Web Design by: Abner Simão Design
           </Link>
         </div>
