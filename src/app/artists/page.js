@@ -10,14 +10,11 @@ function ArtistsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   
-  // Pega a página da URL ou define 1 como padrão
   const pageFromUrl = parseInt(searchParams.get('page')) || 1;
   const [artistsPerPage, setArtistsPerPage] = useState(24);
 
-  // Função para mudar de página atualizando a URL
   const handlePageChange = (newPage) => {
     router.push(`/artists?page=${newPage}`, { scroll: false });
-    // Scroll suave até o título da galeria (não pro topo absoluto)
     setTimeout(() => {
       const galleryTitle = document.querySelector('h1');
       if (galleryTitle) {
@@ -42,11 +39,14 @@ function ArtistsContent() {
   return (
     <div className="min-h-screen text-white font-['Gotham',_sans-serif] relative">
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
+        {/* PASSO 1: OTIMIZAÇÃO DO FUNDO APLICADA ABAIXO */}
         <Image 
           src="/bg_artist_page_op_art.png" 
           alt="background" 
           fill 
           priority 
+          quality={50}
+          sizes="100vw"
           className="object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
@@ -81,12 +81,10 @@ function ArtistsContent() {
           </div>
         )}
       </div>
-      {/* Footer removido porque já está no layout.js */}
     </div>
   );
 }
 
-// O Next.js exige Suspense para usar useSearchParams
 export default function ArtistsPage() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-black" />}>

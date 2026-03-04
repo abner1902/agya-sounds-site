@@ -45,18 +45,20 @@ const organizationSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className="scroll-smooth">
+    // Adicionado suppressHydrationWarning para evitar erros de extensões como DarkReader
+    <html lang="pt-br" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
+        {/* Preconecta com domínios externos para ganhar milissegundos na performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
       <body suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
-        {/* GA4 — carrega o script do Google Analytics de forma otimizada */}
         <GoogleAnalytics gaId="G-B4EL5CCMYE" />
       </body>
     </html>

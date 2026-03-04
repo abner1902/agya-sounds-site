@@ -33,18 +33,43 @@ export const ArtistCard = ({ artist }) => {
   };
 
   return (
-    <a href={artistUrl} onClick={handleClick} className="group relative block w-full aspect-square overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]" style={cardStyle}>
-      <Image src={imageSrc} alt={'Foto de ' + artist.name} fill sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" className="object-cover opacity-90 group-hover:opacity-100" style={imageStyle} />
+    <a 
+      href={artistUrl} 
+      onClick={handleClick} 
+      className="group relative block w-full aspect-square overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]" 
+      style={cardStyle}
+    >
+      <Image 
+        src={imageSrc} 
+        alt={'Foto de ' + artist.name} 
+        fill 
+        // CORREÇÃO: No mobile (640px) o grid é 2 colunas, então cada foto ocupa 50vw.
+        // No desktop (1024px+) o grid é 4 colunas, então cada foto ocupa 25vw.
+        sizes="(max-width: 768px) 50vw, 25vw"
+        // O Sharp vai transformar o JPEG em AVIF com 70% de qualidade aqui:
+        quality={70}
+        className="object-cover opacity-90 group-hover:opacity-100" 
+        style={imageStyle} 
+      />
+      
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4 flex flex-col justify-end">
         <div className="flex items-center justify-between">
-          {/* Nome do Artista: Reduzido para 14px no mobile, mantido text-lg no desktop */}
-          <h3 className="text-white text-[14px] md:text-lg font-bold tracking-tight uppercase">{artist.name}</h3>
+          <h3 className="text-white text-[14px] md:text-lg font-bold tracking-tight uppercase">
+            {artist.name}
+          </h3>
           {artist.countryFlag && (
-            <Image src={flagSrc} alt={'Bandeira de ' + artist.countryName} width={24} height={16} className="rounded shadow-md" />
+            <Image 
+              src={flagSrc} 
+              alt={'Bandeira de ' + artist.countryName} 
+              width={24} 
+              height={16} 
+              className="rounded shadow-md" 
+            />
           )}
         </div>
-        {/* Role: Reduzido para 10px no mobile, mantido text-sm no desktop */}
-        <p className="text-[10px] md:text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">{artist.role}</p>
+        <p className="text-[10px] md:text-sm text-amber-400 font-medium tracking-wide uppercase mt-1">
+          {artist.role}
+        </p>
       </div>
     </a>
   );
