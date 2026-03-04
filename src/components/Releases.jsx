@@ -5,7 +5,6 @@ import { useState, useEffect } from 'react';
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Image from 'next/image';
 
-// Movi o array para fora para deixar o componente mais limpo e performático
 const RELEASES_DATA = [
   { 
     id: 1, 
@@ -52,7 +51,6 @@ export default function Releases() {
     setIsMounted(true); // eslint-disable-line
   }, []);
 
-  // Evita o erro de hidratação
   if (!isMounted) {
     return null;
   }
@@ -101,7 +99,12 @@ export default function Releases() {
                   alt={release.title} 
                   width={400} 
                   height={400}
+                  // OTIMIZAÇÃO: Informa ao navegador o tamanho exato no grid para baixar a imagem certa
+                  sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw"
+                  // OTIMIZAÇÃO: 75% de qualidade é o "sweet spot" para o Sharp/AVIF
+                  quality={75}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                  // OTIMIZAÇÃO: Priority apenas para os dois primeiros (visíveis acima da dobra)
                   priority={release.id <= 2}
                 />
               </a>
