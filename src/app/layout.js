@@ -1,6 +1,7 @@
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
   metadataBase: new URL("https://agyasounds.com.br"),
@@ -13,7 +14,7 @@ export const metadata = {
     siteName: "Agya Sounds",
     images: [
       {
-        url: "/og-image.png",   // ← agora aponta para sua imagem 1200x630
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Agya Sounds - Frequências do Terceiro Olho",
@@ -30,13 +31,12 @@ export const metadata = {
   },
 };
 
-// Schema.org Organization — diz ao Google qual é o logotipo oficial da marca
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Agya Sounds",
   url: "https://agyasounds.com.br",
-  logo: "https://agyasounds.com.br/logo-menu-agya.png",  // logo limpo, sem fundo texto
+  logo: "https://agyasounds.com.br/logo-menu-agya.png",
   sameAs: [
     "https://soundcloud.com/agya-sounds",
     "https://agyasounds.bandcamp.com",
@@ -47,7 +47,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className="scroll-smooth">
       <head>
-        {/* Schema.org injetado como JSON-LD — invisível pro usuário, visível pro Google */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
@@ -57,6 +56,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer />
+        {/* GA4 — carrega o script do Google Analytics de forma otimizada */}
+        <GoogleAnalytics gaId="G-B4EL5CCMYE" />
       </body>
     </html>
   );
