@@ -10,7 +10,7 @@ const RELEASES_DATA = [
     id: 1, 
     title: 'Seeds of a Sunlit Mind EP', 
     artist: 'Koothan', 
-    description: 'Novo EP da Agya Sounds por Koothan, apresenta uma jornada sonora profunda e orgânica, com texturas densas, ritmos hipnóticos e energia de pista. Download gratuito para a comunidade.',
+    description: 'Novo EP da Agya Sounds por Koothan, apresenta uma jornada darkpsy profunda e orgânica, com texturas densas, ritmos hipnóticos e energia de pista. Download gratuito para a comunidade.',
     image: '/images/releases/seeds-of-a-sunlit-mind.jpg', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/seeds-of-a-sunlit-mind-ep', 
     isFree: true 
@@ -81,8 +81,8 @@ export default function Releases() {
         </TextAnimate>
 
         <p className="mx-auto mb-[60px] max-w-[900px] font-sans text-[22px] font-normal leading-[1.5] text-white opacity-90 max-md:mb-10 max-md:text-[18px]">
-          Explore as novas fronteiras da psicodelia experimental. De EPs conceituais a álbuns imersivos, aqui você encontra a vanguarda do Darkpsy voltada para a elevação da consciência e exploração do terceiro olho.
-        </p>
+Mergulhe na vanguarda da psicodelia experimental. Com mais de 150+ músicas lançadas, nossa curadoria foca na expansão da consciência através do Darkpsy de alta fidelidade. Explore os lançamentos recentes abaixo ou navegue pelo nosso Bandcamp para conferir a Discografia completa.       
+</p>
         
         <div className="grid grid-cols-4 gap-[30px] max-[1100px]:grid-cols-2 max-[1100px]:gap-[25px] max-[640px]:grid-cols-1 max-[640px]:gap-[30px]">
           {RELEASES_DATA.map((release) => (

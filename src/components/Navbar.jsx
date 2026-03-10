@@ -57,9 +57,11 @@ export default function Navbar() {
     if (pathname === '/') {
       scrollToSection(getSectionId(item));
     } else {
-      router.push(`/#${getSectionId(item)}`);
+      sessionStorage.setItem('scrollTo', getSectionId(item));
+      router.push('/');
     }
   };
+
 
   return (
     <>
