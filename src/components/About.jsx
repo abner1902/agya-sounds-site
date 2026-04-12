@@ -38,8 +38,7 @@ export default function About() {
         </div>
 
         <p className="mx-auto max-w-200 font-sans text-lg md:text-xl font-normal leading-relaxed text-white/90">
-          Somos uma gravadora de música psicodélica experimental dedicada 
-          a expandir a percepção humana. Através de vertentes do Darkpsy, criamos 
+          Somos uma gravadora de psytrance. Através de vertentes do Darkpsy, criamos 
           experiências sonoras que funcionam como portais para estados elevados de consciência.
         </p>
       </div>

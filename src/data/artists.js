@@ -98,7 +98,7 @@ bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje bas
   latestRelease: {
     title: 'Ouça Agora',
     bandcampUrl: 'https://agyasounds.bandcamp.com/',
-    embedUrl: 'https://www.youtube.com/embed/94grYv0RQXk?si=AQNb1wwkMCavNBAW',
+    embedUrl: 'https://www.youtube.com/embed/C2c0Wy5FG3w?si=BLQeXKON9D6YtsOD&start=882',
   }
 },
     {
