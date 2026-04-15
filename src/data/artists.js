@@ -91,7 +91,7 @@ export const allArtists = [
   image: 'clara_photo.jpg',
   countryFlag: '/flags/brazil.svg',
   countryName: 'Brasil',
-bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje baseada em São Paulo. Desde o primeiro contato com o psytrance, a energia da música se manifestou em sons imersivos, noturnos e introspectivos, com elementos que celebram a força ancestral e a conexão com a Terra. Clara já se apresentou no Jacundá Festival, dentro da Amazônia, e no Universo Paralello Festival na Bahia, no palco 303. Identificada com o ideal da Agya Sounds, a parceria é certa — e em breve estreia oficialmente na Agya Sounds Series.`,  instagram: 'https://www.instagram.com/lucyd.clara/',
+bio: `DJ Clara é o projeto de Ana Clara Molina, natural de Rondônia e hoje baseada em São Paulo. Desde o primeiro contato com o psytrance, a energia da música se manifestou em sons imersivos, noturnos e introspectivos, com elementos que celebram a força ancestral e a conexão com a Terra. Clara já se apresentou no Jacundá Festival, dentro da Amazônia, e no Universo Paralello Festival na Bahia, no palco 303. Identificada com o ideal da Agya Sounds, a parceria é certa — confira a DJ Clara no Agya Sounds Series.`,  instagram: 'https://www.instagram.com/lucyd.clara/',
   soundcloud: 'https://soundcloud.com/lucydclara7',
   spotify: 'https://open.spotify.com/playlist/5r9KrwsHepDB0EHVcsttif?si=3f1f3a9fa198445a',
   youtube: null,

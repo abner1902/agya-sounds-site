@@ -11,8 +11,8 @@ export default function YoutubeVideos() {
     },
     {
       id: 2,
-      title: "DJ EKLYPTO | AGYA SOUNDS SERIES | EP. 01",
-      embedId: "_YjHxY07c9E", 
+      title: "DJ CLARA | AGYA SOUNDS SERIES | EP. 05",
+      embedId: "C2c0Wy5FG3w?start=882", 
     },
     {
       id: 3,

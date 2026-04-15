@@ -8,6 +8,15 @@ import Image from 'next/image';
 const RELEASES_DATA = [
   { 
     id: 1, 
+    title: 'Story Magician EP', 
+    artist: 'Madara', 
+    description: 'Um mago sônico comanda feitiçaria darkpsy onde cada faixa é um capítulo e cada drop um novo encantamento. Texturas retorcidas, grooves dançantes e distorções profundas numa narrativa hipnótica para os dancefloors mais sombrios.',
+    image: '/images/releases/madara-arte-insta.jpg', 
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/story-magician-ep', 
+    isFree: false 
+  },
+  { 
+    id: 2, 
     title: 'Seeds of a Sunlit Mind EP', 
     artist: 'Koothan', 
     description: 'Novo EP da Agya Sounds por Koothan, apresenta uma jornada darkpsy profunda e orgânica, com texturas densas, ritmos hipnóticos e energia de pista. Download gratuito para a comunidade.',
@@ -16,7 +25,7 @@ const RELEASES_DATA = [
     isFree: true 
   },
   { 
-    id: 2, 
+    id: 3, 
     title: 'Pineal Vision EP', 
     artist: 'ABSYCHO', 
     description: 'Absycho mergulha em paisagens mentais onde frequências pulsantes atuam como chaves — abrindo portais e despertando a luz silenciosa da glândula pineal.',
@@ -25,21 +34,12 @@ const RELEASES_DATA = [
     isFree: false 
   },
   { 
-    id: 3, 
+    id: 4, 
     title: 'V/A - Fungus Slug', 
     artist: 'Compiled by Ovni Messenger', 
     description: 'Compilação forest/darkpsy que une mentes frescas e frequências distorcidas do underground. Artistas do Brasil, Chile, Índia e Japão em mutação psicodélica.',
     image: '/images/releases/fungus-slug.jpg', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/v-a-fungus-slug-compiled-by-ovni-messenger', 
-    isFree: false 
-  },
-  { 
-    id: 4, 
-    title: 'Ego Death EP', 
-    artist: 'Naga Baba', 
-    description: 'Três movimentos que mesclam dark progressivo e ecos ancestrais, criando batidas sombrias com cânticos antigos. Uma oferenda ao ciclo de morte e renascimento.',
-    image: '/images/releases/ego-death.jpg', 
-    bandcampUrl: 'https://agyasounds.bandcamp.com/album/ego-death-ep', 
     isFree: false 
   }
 ];
