@@ -372,9 +372,9 @@ Confira mais lançamentos no Bandcamp e mergulhe na experiência.`,
   spotify: 'https://open.spotify.com/intl-pt/artist/16X1M2vcibhlcfV9iuqZ0t?si=XADpaHlORYyTyjJn5jttGw',
   youtube: null,
   latestRelease: {
-    title: 'Photons',
-    bandcampUrl: 'https://agyasounds.bandcamp.com/track/madara-photons-150bpm',
-    embedUrl: 'https://www.youtube.com/embed/biprxiOLwY8?si=GNYxCH4zXu5ZLyma',
+    title: 'Story Magician EP',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/story-magician-ep',
+    embedUrl: 'https://www.youtube.com/embed/uZgClWdYmx0?si=P6rruVNXvaipz8Vm&start=1',
   }
 },
   {
