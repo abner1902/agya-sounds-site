@@ -1,8 +1,16 @@
 'use client';
 
+import { useState } from "react";
+import Image from "next/image";
 import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function YoutubeVideos() {
+  const [activeVideos, setActiveVideos] = useState({});
+
+  const activateVideo = (videoId) => {
+    setActiveVideos((prev) => ({ ...prev, [videoId]: true }));
+  };
+
   const videos = [
     {
       id: 1,
@@ -49,19 +57,38 @@ export default function YoutubeVideos() {
               </h3>
               
               <div className="relative aspect-video overflow-hidden rounded-[24px] border border-white/5 bg-zinc-950 transition-all duration-500 group-hover:border-white/20 shadow-2xl">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  // Adicionado &loading=1 para reforçar o adiamento do carregamento
-                  src={`https://www.youtube.com/embed/${video.embedId}?rel=0&loading=1`}
-                  title={video.title}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  // O CRÍTICO: Impede que o vídeo carregue antes do usuário chegar nele
-                  loading="lazy"
-                  className="absolute inset-0"
-                ></iframe>
+                {activeVideos[video.id] ? (
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={`https://www.youtube.com/embed/${video.embedId}?rel=0&autoplay=1`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                    className="absolute inset-0"
+                  ></iframe>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => activateVideo(video.id)}
+                    aria-label={`Reproduzir video: ${video.title}`}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={`https://i.ytimg.com/vi/${video.embedId.split("?")[0]}/hqdefault.jpg`}
+                      alt={video.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover"
+                    />
+                    <span className="absolute inset-0 bg-black/35" />
+                    <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600 px-5 py-3 text-xs font-black uppercase tracking-wider text-white shadow-xl">
+                      Assistir
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
           ))}

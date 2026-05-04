@@ -1,14 +1,16 @@
 'use client';
 
-import About from "@/components/About";
-import Artists from "@/components/Artists";
-import Releases from "@/components/Releases";
-import Instagram from "@/components/Instagram";
-import MusicSocialMedia from "@/components/MusicSocialMedia"; 
-import YoutubeVideos from "@/components/YoutubeVideos";
-import SocialLinks from "@/components/SocialLinks";
-import DemoCard from "@/components/DemoCard";
+import dynamic from "next/dynamic";
 import Image from "next/image";
+
+const About = dynamic(() => import("@/components/About"));
+const Artists = dynamic(() => import("@/components/Artists"));
+const Releases = dynamic(() => import("@/components/Releases"));
+const YoutubeVideos = dynamic(() => import("@/components/YoutubeVideos"));
+const Instagram = dynamic(() => import("@/components/Instagram"));
+const MusicSocialMedia = dynamic(() => import("@/components/MusicSocialMedia"));
+const DemoCard = dynamic(() => import("@/components/DemoCard"));
+const SocialLinks = dynamic(() => import("@/components/SocialLinks"));
 
 export default function Home() {
   return (
@@ -44,6 +46,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="none"
             className="w-full h-full object-cover"
           >
             <source src="/videos/fundo-bg-site-agya_animation.webm" type="video/webm" />

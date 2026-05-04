@@ -2,7 +2,6 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL("https://agyasounds.com.br"),
@@ -33,7 +32,7 @@ const organizationSchema = {
   "@type": "MusicGroup",
   name: "Agya Sounds",
   url: "https://agyasounds.com.br",
-  logo: "https://agyasounds.com.br/logo-menu-agya.png",
+  logo: "https://agyasounds.com.br/logo-menu-agya.webp",
   foundingDate: "2018",
   genre: ["Darkpsy", "Forest Psytrance", "Psytrance", "Dark Progressive"],
   description: "Gravadora brasileira de Darkpsy, Forest Psy e Psytrance underground, fundada em 2018 em São Paulo, Brasil.",
@@ -105,14 +104,12 @@ export default function RootLayout({ children }) {
         <link rel="preload" href="/fonts/GothamMedium.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/GothamLight.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://image-cdn-fa.spotifycdn.com" />
       </head>
       <body suppressHydrationWarning>
         <Navbar />
         {children}
         <Footer />
         <GoogleAnalytics gaId="G-B4EL5CCMYE" />
-        <Script src="https://audius.co/player.js" strategy="lazyOnload" />
       </body>
     </html>
   );
