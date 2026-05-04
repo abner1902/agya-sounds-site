@@ -7,11 +7,6 @@ import { TextAnimate } from "@/components/magicui/text-animate";
 
 export default function MusicSocialMedia() {
   const [isClient, setIsClient] = useState(false);
-  const [enabledEmbeds, setEnabledEmbeds] = useState({
-    soundcloud: false,
-    spotify: false,
-    audius: false,
-  });
 
   useEffect(() => {
     setIsClient(true);
@@ -86,30 +81,6 @@ export default function MusicSocialMedia() {
     );
   }
 
-  const renderEmbedCard = ({ keyName, title, iframeProps, style }) => (
-    <div className="relative h-[380px] rounded-2xl border border-white/5 bg-zinc-950/50 shadow-2xl">
-      {enabledEmbeds[keyName] ? (
-        <iframe
-          {...iframeProps}
-          loading="lazy"
-          className="h-full w-full rounded-2xl"
-          style={style}
-        />
-      ) : (
-        <button
-          type="button"
-          onClick={() => setEnabledEmbeds((prev) => ({ ...prev, [keyName]: true }))}
-          className="flex h-full w-full items-center justify-center rounded-2xl bg-zinc-900/70 text-center text-white transition hover:bg-zinc-800"
-          aria-label={`Carregar player ${title}`}
-        >
-          <span className="px-6 text-sm font-black uppercase tracking-widest text-[#B1A27A]">
-            Carregar {title}
-          </span>
-        </button>
-      )}
-    </div>
-  );
-
   return (
     <section id="music" className="relative overflow-hidden bg-black px-6 py-20 md:px-12 lg:py-32">
       {/* Meteors Layer */}
@@ -162,42 +133,36 @@ export default function MusicSocialMedia() {
 
         {/* Players Grid */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
-          {renderEmbedCard({
-            keyName: "soundcloud",
-            title: "SoundCloud",
-            iframeProps: {
-              title: "SoundCloud Player - Agya Sounds",
-              width: "100%",
-              height: "380",
-              scrolling: "no",
-              frameBorder: "no",
-              allow: "autoplay",
-              src: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1865702913&color=%23B1A27A&auto_play=false",
-            },
-          })}
-          {renderEmbedCard({
-            keyName: "spotify",
-            title: "Spotify",
-            iframeProps: {
-              title: "Spotify Player - Agya Sounds",
-              src: "https://open.spotify.com/embed/playlist/5r9KrwsHepDB0EHVcsttif?utm_source=generator&theme=0",
-              width: "100%",
-              height: "380",
-              allow: "autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture",
-            },
-            style: { borderRadius: "12px" },
-          })}
-          {renderEmbedCard({
-            keyName: "audius",
-            title: "Audius",
-            iframeProps: {
-              title: "Audius Player - Agya Sounds",
-              src: "https://audius.co/embed/album/agyasounds/goan-spirit-debut-album?flavor=card",
-              width: "100%",
-              height: "380",
-            },
-            style: { border: "none" },
-          })}
+          <iframe
+            title="SoundCloud Player - Agya Sounds"
+            width="100%"
+            height="380"
+            scrolling="no"
+            frameBorder="no"
+            allow="autoplay"
+            loading="lazy"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1865702913&color=%23B1A27A&auto_play=false"
+            className="rounded-2xl border border-white/5 bg-zinc-950/50 backdrop-blur-sm shadow-2xl"
+          />
+          <iframe
+            title="Spotify Player - Agya Sounds"
+            style={{ borderRadius: '12px' }}
+            src="https://open.spotify.com/embed/playlist/5r9KrwsHepDB0EHVcsttif?utm_source=generator&theme=0"
+            width="100%"
+            height="380"
+            loading="lazy"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            className="rounded-2xl border border-white/5 bg-zinc-950/50 backdrop-blur-sm shadow-2xl"
+          />
+          <iframe
+            title="Audius Player - Agya Sounds"
+            src="https://audius.co/embed/album/agyasounds/goan-spirit-debut-album?flavor=card"
+            width="100%"
+            height="380"
+            loading="lazy"
+            style={{ border: "none" }}
+            className="rounded-2xl border border-white/5 bg-zinc-950/50 backdrop-blur-sm shadow-2xl"
+          />
         </div>
       </div>
     </section>

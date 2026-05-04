@@ -1,5 +1,3 @@
-'use client';
-
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -25,8 +23,9 @@ export default function Home() {
           alt="Agya Sounds Background"
           fill
           priority
+          sizes="100vw"
           className="object-cover z-0 md:hidden"
-          quality={50}
+          quality={45}
         />
 
         {/* Desktop: imagem de fundo por baixo do vídeo */}
@@ -34,9 +33,9 @@ export default function Home() {
           src="/fundo-bg-site-agya.webp"
           alt="Agya Sounds Background"
           fill
-          priority
+          sizes="100vw"
           className="object-cover z-0 hidden md:block"
-          quality={60}
+          quality={45}
         />
 
         {/* Desktop only: vídeo em loop */}
