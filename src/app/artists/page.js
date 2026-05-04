@@ -59,7 +59,9 @@ function ArtistsContent() {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {currentArtists.map((artist) => <ArtistCard key={artist.id} artist={artist} />)}
+          {currentArtists.map((artist) => (
+            <ArtistCard key={artist.id} artist={artist} currentPage={pageFromUrl} />
+          ))}
         </div>
 
         {totalPages > 1 && (

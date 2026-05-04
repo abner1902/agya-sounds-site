@@ -4,11 +4,11 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
-export const ArtistCard = ({ artist }) => {
+export const ArtistCard = ({ artist, currentPage = 1 }) => {
   const router = useRouter();
   const [clicked, setClicked] = useState(false);
 
-  const artistUrl = '/artists/' + artist.id;
+  const artistUrl = `/artists/${artist.id}?fromPage=${currentPage}`;
   const imageSrc = '/images/artists/' + artist.image;
   const flagSrc = '/images' + artist.countryFlag;
 
@@ -34,6 +34,7 @@ export const ArtistCard = ({ artist }) => {
 
   return (
     <a 
+      id={`artist-${artist.id}`}
       href={artistUrl} 
       onClick={handleClick} 
       className="group relative block w-full aspect-square overflow-hidden rounded-lg cursor-pointer transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]" 

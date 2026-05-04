@@ -1,18 +1,32 @@
 'use client';
 import { use, useEffect } from 'react';
 import { allArtists } from '@/data/artists';
-import { notFound, useRouter } from 'next/navigation';
+import { notFound, useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import { ChevronLeft } from 'lucide-react';
 
 export default function ArtistBioPage({ params: paramsPromise }) {
   const params = use(paramsPromise);
   const router = useRouter();
+  const searchParams = useSearchParams();
   const artist = allArtists.find((a) => a.id === params.id);
+  const fromPage = searchParams.get('fromPage') || '1';
+  const returnUrl = `/artists?page=${fromPage}#artist-${params.id}`;
   
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    const handleEsc = (event) => {
+      if (event.key === 'Escape') {
+        router.push(returnUrl);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, [router, returnUrl]);
 
   if (!artist) return notFound();
 
@@ -39,7 +53,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
       <div className="max-w-[1323px] mx-auto px-6 pt-12 pb-24 relative z-10">
         <button 
-          onClick={() => router.back()} 
+          onClick={() => router.push(returnUrl)} 
           aria-label="Voltar para lista de artistas"
           className="inline-flex items-center gap-2 text-zinc-500 hover:text-white mb-10 uppercase text-[11px] font-bold tracking-[0.4em] transition-all cursor-pointer"
         >
