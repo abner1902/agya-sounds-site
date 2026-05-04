@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "webp:convert": "node scripts/webp-convert-gallery.js",
+    "webp:replace": "node scripts/webp-replace-references.js",
+    "webp:validate": "node scripts/webp-validate.js",
+    "webp:migrate": "node scripts/webp-migrate-and-deploy.js",
+    "webp:migrate:deploy": "node scripts/webp-migrate-and-deploy.js --deploy"
   },
   "dependencies": {
     "@next/third-parties": "^16.1.6",

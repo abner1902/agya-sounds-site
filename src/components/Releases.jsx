@@ -11,7 +11,7 @@ const RELEASES_DATA = [
     title: 'Story Magician EP', 
     artist: 'Madara', 
     description: 'Um mago sônico comanda feitiçaria darkpsy onde cada faixa é um capítulo e cada drop um novo encantamento. Texturas retorcidas, grooves dançantes e distorções profundas numa narrativa hipnótica para os dancefloors mais sombrios.',
-    image: '/images/releases/madara-arte-insta.jpg', 
+    image: '/images/releases/madara-arte-insta.webp', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/story-magician-ep', 
     isFree: false 
   },
@@ -20,7 +20,7 @@ const RELEASES_DATA = [
     title: 'Seeds of a Sunlit Mind EP', 
     artist: 'Koothan', 
     description: 'Novo EP da Agya Sounds por Koothan, apresenta uma jornada darkpsy profunda e orgânica, com texturas densas, ritmos hipnóticos e energia de pista. Download gratuito para a comunidade.',
-    image: '/images/releases/seeds-of-a-sunlit-mind.jpg', 
+    image: '/images/releases/seeds-of-a-sunlit-mind.webp', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/seeds-of-a-sunlit-mind-ep', 
     isFree: true 
   },
@@ -29,7 +29,7 @@ const RELEASES_DATA = [
     title: 'Pineal Vision EP', 
     artist: 'ABSYCHO', 
     description: 'Absycho mergulha em paisagens mentais onde frequências pulsantes atuam como chaves — abrindo portais e despertando a luz silenciosa da glândula pineal.',
-    image: '/images/releases/pineal-vision.jpg', 
+    image: '/images/releases/pineal-vision.webp', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/pineal-vision-ep', 
     isFree: false 
   },
@@ -38,7 +38,7 @@ const RELEASES_DATA = [
     title: 'V/A - Fungus Slug', 
     artist: 'Compiled by Ovni Messenger', 
     description: 'Compilação forest/darkpsy que une mentes frescas e frequências distorcidas do underground. Artistas do Brasil, Chile, Índia e Japão em mutação psicodélica.',
-    image: '/images/releases/fungus-slug.jpg', 
+    image: '/images/releases/fungus-slug.webp', 
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/v-a-fungus-slug-compiled-by-ovni-messenger', 
     isFree: false 
   }
