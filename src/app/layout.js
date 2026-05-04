@@ -15,7 +15,7 @@ export const metadata = {
     description: "Gravadora brasileira de darkpsy, forest psy e psytrance underground. Conheça nossos artistas e releases.",
     url: "https://agyasounds.com.br",
     siteName: "Agya Sounds",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Agya Sounds — Gravadora de Darkpsy" }],
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Agya Sounds — Gravadora de Darkpsy" }],
     locale: "pt_BR",
     type: "website",
   },
@@ -23,7 +23,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Agya Sounds | Gravadora de Darkpsy",
     description: "Gravadora brasileira de darkpsy e psytrance underground. Artistas, releases e distribuição independente.",
-    images: ["/og-image.png"],
+    images: ["/og-image.webp"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 };

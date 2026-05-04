@@ -19,7 +19,7 @@ export default function DemoCard() {
           {/* Imagem do Personagem Otimizada */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image 
-              src="/demo-character.png" 
+              src="/demo-character.webp" 
               alt="Produtor Agya" 
               width={400} // Definimos o tamanho base para o Next calcular o aspecto
               height={400}

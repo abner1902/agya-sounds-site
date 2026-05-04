@@ -14,6 +14,7 @@ function parseArgs(argv) {
     galleryDirs: ["public/images/artists", "public/images/releases"],
     galleryUrlPrefixes: ["/images/artists/", "/images/releases/"],
     bareFilenameBaseDirs: ["public/images/artists", "public/images/releases"],
+    failOnMissingRefs: true,
   };
   for (let i = 0; i < argv.length; i += 1) {
     const token = argv[i];
@@ -32,6 +33,8 @@ function parseArgs(argv) {
     } else if (token === "--bare-filename-base-dirs" && argv[i + 1]) {
       args.bareFilenameBaseDirs = argv[i + 1].split(",").map((x) => x.trim()).filter(Boolean);
       i += 1;
+    } else if (token === "--ignore-missing-refs") {
+      args.failOnMissingRefs = false;
     }
   }
   return args;
@@ -156,12 +159,19 @@ function main() {
     }
   }
 
-  if (missingReferences.length > 0 || missingWebpFromGallery.length > 0) {
+  if (
+    missingWebpFromGallery.length > 0 ||
+    (args.failOnMissingRefs && missingReferences.length > 0)
+  ) {
     console.log("\n[ERRO] Referencias quebradas encontradas:");
     for (const item of missingReferences.slice(0, 20)) {
       console.log(`- ${item.file}: ${item.ref}`);
     }
     process.exit(1);
+  }
+
+  if (!args.failOnMissingRefs && missingReferences.length > 0) {
+    console.log("\n[WARN] Referencias quebradas existentes foram ignoradas por --ignore-missing-refs.");
   }
 
   console.log("\n[OK] Validacao concluida sem referencias quebradas.");

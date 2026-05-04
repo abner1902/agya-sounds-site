@@ -56,7 +56,7 @@ export default function SocialLinks() {
     <section className="relative w-full py-32 px-6 overflow-hidden bg-black">
       <div 
         className="absolute inset-0 z-0 opacity-40 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: "url('/bg-redes-sociais.jpg')" }}
+        style={{ backgroundImage: "url('/bg-redes-sociais.webp')" }}
       />
       <div className="absolute inset-0 z-1 bg-gradient-to-b from-black via-transparent to-black pointer-events-none" />
 

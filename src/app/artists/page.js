@@ -41,7 +41,7 @@ function ArtistsContent() {
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         {/* PASSO 1: OTIMIZAÇÃO DO FUNDO APLICADA ABAIXO */}
         <Image 
-          src="/bg_artist_page_op_art.png" 
+          src="/bg_artist_page_op_art.webp" 
           alt="background" 
           fill 
           priority 

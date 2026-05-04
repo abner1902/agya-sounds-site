@@ -10,7 +10,7 @@ export default function About() {
       {/* OTIMIZAÇÃO: Usando Next/Image para a Op Art */}
       <div className="absolute inset-0 z-1 opacity-20 pointer-events-none">
         <Image 
-          src="/fundo_op_art.jpg" 
+          src="/fundo_op_art.webp" 
           alt="Op Art Texture"
           fill
           className="object-cover"

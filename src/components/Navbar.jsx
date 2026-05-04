@@ -70,7 +70,7 @@ export default function Navbar() {
         <div className="flex h-[80px] w-full items-center justify-between px-6 md:px-12 lg:px-20">
 
           <Link href="/" className="transition-transform hover:scale-105">
-            <Image src="/logo-menu-agya.png" alt="Agya Sounds" width={180} height={45} className="h-[30px] w-auto lg:h-[45px]" priority />
+            <Image src="/logo-menu-agya.webp" alt="Agya Sounds" width={180} height={45} className="h-[30px] w-auto lg:h-[45px]" priority />
           </Link>
 
           <ul className="hidden items-center gap-4 lg:flex">

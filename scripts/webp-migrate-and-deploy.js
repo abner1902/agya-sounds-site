@@ -19,6 +19,7 @@ function parseArgs(argv) {
     scanDirs: ["src"],
     deploy: false,
     dryRun: false,
+    ignoreMissingRefs: false,
   };
 
   for (let i = 0; i < argv.length; i += 1) {
@@ -39,6 +40,8 @@ function parseArgs(argv) {
       args.deploy = true;
     } else if (token === "--dry-run") {
       args.dryRun = true;
+    } else if (token === "--ignore-missing-refs") {
+      args.ignoreMissingRefs = true;
     }
   }
   return args;
@@ -139,6 +142,7 @@ function main() {
         args.galleryPrefixes.join(","),
         "--bare-filename-base-dirs",
         bareFilenameBaseDirs.join(","),
+        ...(args.ignoreMissingRefs ? ["--ignore-missing-refs"] : []),
       ],
       args.root
     );

@@ -28,7 +28,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
     <main className="min-h-screen text-white font-['GothamCustom',_sans-serif] relative">
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
         <Image 
-          src="/bg_artist_page_op_art.png" 
+          src="/bg_artist_page_op_art.webp" 
           alt="background" 
           fill 
           priority 

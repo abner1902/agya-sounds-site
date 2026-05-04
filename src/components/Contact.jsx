@@ -122,7 +122,7 @@ export default function Contact() {
           {/* Imagem otimizada para o Lighthouse */}
           <div className="relative w-full h-[200px] mt-4">
             <Image
-              src="/demo-character.png"
+              src="/demo-character.webp"
               alt="Produtor Agya"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

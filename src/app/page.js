@@ -19,7 +19,7 @@ export default function Home() {
         
         {/* Mobile: imagem estática para máxima performance */}
         <Image
-          src="/fundo-bg-site-agya_mobile.jpg"
+          src="/fundo-bg-site-agya_mobile.webp"
           alt="Agya Sounds Background"
           fill
           priority
@@ -29,7 +29,7 @@ export default function Home() {
 
         {/* Desktop: imagem de fundo por baixo do vídeo */}
         <Image
-          src="/fundo-bg-site-agya.jpg"
+          src="/fundo-bg-site-agya.webp"
           alt="Agya Sounds Background"
           fill
           priority
