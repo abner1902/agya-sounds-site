@@ -2,8 +2,10 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Image from 'next/image';
+import { useTranslations } from '@/contexts/IntlContext';
 
 export default function Instagram() {
+  const t = useTranslations();
   const posts = [
     { id: 1, url: '/insta-1.webp', link: 'https://www.instagram.com/p/DT_OeX-EWRw/' },
     { id: 2, url: '/insta-2.webp', link: 'https://www.instagram.com/p/DSFmCVckTn-/' },
@@ -25,27 +27,12 @@ export default function Instagram() {
 
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {posts.map((post) => (
-            <a 
-              key={post.id} 
-              href={post.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-xl bg-neutral-900"
-            >
-              <Image 
-                src={post.url} 
-                alt={`Instagram post ${post.id}`} 
-                // Reduzimos para 400px. O original de 1080px será ignorado
-                width={400} 
-                height={400}
-                // O segredo está aqui: quality={75} força uma compressão WebP eficiente
-                quality={75}
-                // Garante que a imagem só carregue quando o usuário fizer scroll (Lazy Loading)
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+            <a key={post.id} href={post.link} target="_blank" rel="noopener noreferrer"
+              className="group relative aspect-square overflow-hidden rounded-xl bg-neutral-900">
+              <Image src={post.url} alt={`Instagram post ${post.id}`} width={400} height={400} quality={75} loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
               <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <span className="text-sm font-bold text-white">VER NO INSTA</span>
+                <span className="text-sm font-bold text-white">{t('instagram.seePost')}</span>
               </div>
             </a>
           ))}

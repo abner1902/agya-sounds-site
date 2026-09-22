@@ -2,44 +2,33 @@
 
 import { TextAnimate } from "@/components/magicui/text-animate";
 import Image from 'next/image';
+import { useTranslations } from '@/contexts/IntlContext';
 
 export default function About() {
+  const t = useTranslations();
+
   return (
     <section id="sobre" className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-black px-5 py-25">
-      
-      {/* OTIMIZAÇÃO: Usando Next/Image para a Op Art */}
       <div className="absolute inset-0 z-1 opacity-20 pointer-events-none">
-        <Image 
-          src="/fundo_op_art.webp" 
-          alt="Op Art Texture"
-          fill
-          className="object-cover"
-          quality={40} // Textura pode ter qualidade baixa
-        />
+        <Image src="/fundo_op_art.webp" alt="Op Art Texture" fill className="object-cover" quality={40} />
       </div>
       
       <div className="z-10 w-full max-w-225 text-center">
-        <TextAnimate 
-          animation="fadeIn" 
-          by="word" 
-          className="mb-6 font-sans text-sm font-bold uppercase tracking-widest text-[#B1A27A]"
-        >
-          Sobre a Gravadora
+        <TextAnimate animation="fadeIn" by="word" className="mb-6 font-sans text-sm font-bold uppercase tracking-widest text-[#B1A27A]">
+          {t('about.eyebrow')}
         </TextAnimate>
         
         <div className="mb-10 font-sans text-3xl md:text-4xl font-black uppercase text-white leading-tight flex flex-col items-center">
           <TextAnimate animation="slideUp" by="character" as="h2">
-            Agya Sounds
+            {t('about.heading')}
           </TextAnimate>
-          
           <TextAnimate animation="slideUp" by="word" delay={0.5} className="text-white text-2xl md:text-3xl">
-            Frequências do Terceiro Olho
+            {t('about.subtitle')}
           </TextAnimate>
         </div>
 
         <p className="mx-auto max-w-200 font-sans text-lg md:text-xl font-normal leading-relaxed text-white/90">
-          Somos uma gravadora de psytrance. Através de vertentes do Darkpsy, criamos 
-          experiências sonoras que funcionam como portais para estados elevados de consciência.
+          {t('about.description')}
         </p>
       </div>
     </section>

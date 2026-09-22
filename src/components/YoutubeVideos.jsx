@@ -3,8 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { useTranslations } from '@/contexts/IntlContext';
 
 export default function YoutubeVideos() {
+  const t = useTranslations();
   const [activeVideos, setActiveVideos] = useState({});
 
   const activateVideo = (videoId) => {
@@ -12,26 +14,10 @@ export default function YoutubeVideos() {
   };
 
   const videos = [
-    {
-      id: 1,
-      title: "DJ THAÍ | AGYA SOUNDS SERIES | EP. 02",
-      embedId: "iLG5NBXZMSE", 
-    },
-    {
-      id: 2,
-      title: "DJ CLARA | AGYA SOUNDS SERIES | EP. 05",
-      embedId: "C2c0Wy5FG3w?start=882", 
-    },
-    {
-      id: 3,
-      title: "PODCAST GERAÇÃO XYZ FOREVER - ABSYCHO",
-      embedId: "aMqRDdPemw0",
-    },
-    {
-      id: 4,
-      title: "AFTER MOVIE AGYA EFFECT - NEKROPOLIS EDITION",
-      embedId: "rNVw6f2H3k0",
-    }
+    { id: 1, title: "DJ THAÍ | AGYA SOUNDS SERIES | EP. 02", embedId: "iLG5NBXZMSE" },
+    { id: 2, title: "DJ CLARA | AGYA SOUNDS SERIES | EP. 05", embedId: "C2c0Wy5FG3w?start=882" },
+    { id: 3, title: "PODCAST GERAÇÃO XYZ FOREVER - ABSYCHO", embedId: "aMqRDdPemw0" },
+    { id: 4, title: "AFTER MOVIE AGYA EFFECT - NEKROPOLIS EDITION", embedId: "rNVw6f2H3k0" }
   ];
 
   return (
@@ -45,7 +31,7 @@ export default function YoutubeVideos() {
             as="h2" 
             className="font-sans text-[32px] font-black uppercase tracking-tighter text-white md:text-[50px]"
           >
-            YOUTUBE
+            {t('youtube.title')}
           </TextAnimate>
         </div>
 
@@ -85,7 +71,7 @@ export default function YoutubeVideos() {
                     />
                     <span className="absolute inset-0 bg-black/35" />
                     <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-red-600 px-5 py-3 text-xs font-black uppercase tracking-wider text-white shadow-xl">
-                      Assistir
+                      {t('youtube.watch')}
                     </span>
                   </button>
                 )}

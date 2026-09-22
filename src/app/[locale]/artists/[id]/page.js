@@ -1,18 +1,25 @@
 'use client';
 import { use, useEffect } from 'react';
 import { allArtists } from '@/data/artists';
-import { notFound, useRouter, useSearchParams } from 'next/navigation';
+import { notFound, useRouter, useSearchParams, usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { ChevronLeft } from 'lucide-react';
+import { useTranslations } from '@/contexts/IntlContext';
 
 export default function ArtistBioPage({ params: paramsPromise }) {
+  const t = useTranslations();
   const params = use(paramsPromise);
   const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  const segments = (pathname || '/').split('/').filter(Boolean);
+  const locale = ['pt', 'en', 'es'].includes(segments[0]) ? segments[0] : 'pt';
+
   const artist = allArtists.find((a) => a.id === params.id);
   const fromPage = searchParams.get('fromPage') || '1';
-  const returnUrl = `/artists?page=${fromPage}#artist-${params.id}`;
-  
+  const returnUrl = `/${locale}/artists?page=${fromPage}#artist-${params.id}`;
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -23,7 +30,6 @@ export default function ArtistBioPage({ params: paramsPromise }) {
         router.push(returnUrl);
       }
     };
-
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, [router, returnUrl]);
@@ -41,23 +47,23 @@ export default function ArtistBioPage({ params: paramsPromise }) {
   return (
     <main className="min-h-screen text-white font-['GothamCustom',_sans-serif] relative">
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
-        <Image 
-          src="/bg_artist_page_op_art.webp" 
-          alt="background" 
-          fill 
-          priority 
+        <Image
+          src="/bg_artist_page_op_art.webp"
+          alt="background"
+          fill
+          priority
           className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
       </div>
 
       <div className="max-w-[1323px] mx-auto px-6 pt-12 pb-24 relative z-10">
-        <button 
-          onClick={() => router.push(returnUrl)} 
+        <button
+          onClick={() => router.push(returnUrl)}
           aria-label="Voltar para lista de artistas"
           className="inline-flex items-center gap-2 text-zinc-500 hover:text-white mb-10 uppercase text-[11px] font-bold tracking-[0.4em] transition-all cursor-pointer"
         >
-          <ChevronLeft size={16} /> VOLTAR PARA ARTISTAS
+          <ChevronLeft size={16} /> {t('artistBio.back')}
         </button>
 
         <div className="relative w-full aspect-[1323/882] rounded-sm overflow-hidden shadow-2xl mb-16 border border-white/5">
@@ -67,7 +73,6 @@ export default function ArtistBioPage({ params: paramsPromise }) {
         <div className="flex flex-col items-center mb-20 text-center">
           <div className="flex items-center gap-6 justify-center flex-wrap">
             <h1 className="text-[32px] md:text-[40px] font-black uppercase italic tracking-tighter leading-none">{artist.name}</h1>
-            {/* ✅ <img> → <Image> do Next.js para bandeira do país */}
             <Image
               src={`/images${artist.countryFlag}`}
               alt={artist.countryName}
@@ -89,7 +94,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
               <iframe
                 className="w-full h-full"
                 src={`https://www.youtube.com/embed/${videoId}`}
-                title={`${artist.name} - Último lançamento`}
+                title={`${artist.name} - ${t('artistBio.latestRelease')}`}
                 allowFullScreen
               />
             </div>
@@ -98,7 +103,6 @@ export default function ArtistBioPage({ params: paramsPromise }) {
               <div className="flex gap-4 items-center flex-shrink-0">
                 {artist.instagram ? (
                   <a href={artist.instagram} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
-                    {/* ✅ <img> externo → <Image> do Next.js */}
                     <Image src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" width={40} height={40} className="object-contain" alt="Instagram" />
                   </a>
                 ) : (
@@ -110,19 +114,19 @@ export default function ArtistBioPage({ params: paramsPromise }) {
                 <a href={artist.soundcloud} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
                   <Image src="/images/icons/soundcloud_icon.svg" width={40} height={40} className="object-contain" alt="SoundCloud" />
                 </a>
-                
+
                 <a href={artist.spotify} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center hover:scale-110 transition-all opacity-80 hover:opacity-100">
                   <Image src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" width={40} height={40} className="object-contain" alt="Spotify" />
                 </a>
               </div>
 
-              <a 
-                href={artist.latestRelease?.bandcampUrl || "#"} 
+              <a
+                href={artist.latestRelease?.bandcampUrl || "#"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 max-w-[250px] h-14 flex items-center justify-center bg-violet-700 hover:bg-violet-600 text-white text-base font-bold uppercase rounded-xl transition-all shadow-lg shadow-violet-700/20"
               >
-                {artist.role === 'DJ SET' ? 'OUÇA AGORA' : 'LAST RELEASE'}
+                {artist.role === 'DJ SET' ? t('artistBio.listenNow') : t('artistBio.lastRelease')}
               </a>
             </div>
           </div>

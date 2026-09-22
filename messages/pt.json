@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "inicio": "Início", "sobre": "Sobre", "artistas": "Artistas",
+    "lancamentos": "Lançamentos", "videos": "Vídeos", "instagram": "Instagram",
+    "streaming": "Streaming", "contato": "Contato", "tutoriais": "Tutoriais"
+  },
+  "about": {
+    "eyebrow": "Sobre a Gravadora",
+    "heading": "Agya Sounds",
+    "subtitle": "Frequências do Terceiro Olho",
+    "description": "Somos uma gravadora de psytrance. Através de vertentes do Darkpsy, criamos experiências sonoras que funcionam como portais para estados elevados de consciência."
+  },
+  "artists": {
+    "title": "ARTISTAS",
+    "description": "Nossos artistas canalizam frequências do terceiro olho. Cada projeto sonoro é uma jornada espiritual, conectando tecnologia, natureza e consciência expandida.",
+    "cta": "SAIBA MAIS",
+    "viewCasting": "VER CASTING COMPLETO"
+  },
+  "artistsGallery": {
+    "title": "CONHEÇA OS ARTISTAS",
+    "description": "AGYA SOUNDS apresenta produtores e DJs do casting para eventos de psytrance focados em psicodelia avançada.",
+    "pageLabel": "Página"
+  },
+  "artistBio": {
+    "back": "VOLTAR PARA ARTISTAS",
+    "latestRelease": "Último lançamento",
+    "listenNow": "OUÇA AGORA",
+    "lastRelease": "ÚLTIMO LANÇAMENTO"
+  },
+  "releases": {
+    "title": "ÚLTIMOS LANÇAMENTOS",
+    "description": "Mergulhe na vanguarda da psicodelia experimental. Com mais de 150+ músicas lançadas, nossa curadoria foca na expansão da consciência através do Darkpsy de alta fidelidade. Explore os lançamentos recentes abaixo ou navegue pelo nosso Bandcamp para conferir a Discografia completa.",
+    "download": "DOWNLOAD",
+    "free": "FREE DOWNLOAD",
+    "item1": { "description": "Um mago sônico comanda feitiçaria darkpsy onde cada faixa é um capítulo e cada drop um novo encantamento. Texturas retorcidas, grooves dançantes e distorções profundas numa narrativa hipnótica para os dancefloors mais sombrios." },
+    "item2": { "description": "Novo EP da Agya Sounds por Koothan, apresenta uma jornada darkpsy profunda e orgânica, com texturas densas, ritmos hipnóticos e energia de pista. Download gratuito para a comunidade." },
+    "item3": { "description": "Absycho mergulha em paisagens mentais onde frequências pulsantes atuam como chaves — abrindo portais e despertando a luz silenciosa da glândula pineal." },
+    "item4": { "description": "Compilação forest/darkpsy que une mentes frescas e frequências distorcidas do underground. Artistas do Brasil, Chile, Índia e Japão em mutação psicodélica." }
+  },
+  "youtube": { "title": "YOUTUBE", "watch": "Assistir" },
+  "instagram": { "seePost": "VER NO INSTA" },
+  "music": { "title": "Nossas Frequências", "subtitle": "Agya Sounds Streaming Hub" },
+  "demo": {
+    "title": "ENVIE SUA DEMO",
+    "description": "Buscamos Darkpsy autêntico. Envie seu link do SoundCloud ou Google Drive (WAV, 44.1kHz, 24-bit) com mixagem em -6dB. Mostre-nos sua evolução sonora.",
+    "cta": "Enviar Demo"
+  },
+  "contact": {
+    "title": "CONTATO",
+    "heading": "Quer lançar sua música ou entrar em contato com Agya Sounds?",
+    "body1": "Estamos sempre abertos a descobrir novos artistas e novas sonoridades dentro do universo do Darkpsy!",
+    "body2": "Do progressivo ao high bpm (130 a 200 BPM).",
+    "body3": "Valorizamos autenticidade, qualidade, identidade sonora e evolução artística.",
+    "body4": "Se você deseja enviar material, compartilhe seu link do SoundCloud ou Google Drive (em WAV, 44.1kHz, 24-bit), com a mixagem em -6dB.",
+    "body5": "Queremos ouvir sua essência e acompanhar sua jornada sonora.",
+    "body6": "Também ficamos felizes em conversar caso você queira organizar uma Night, propor uma colaboração ou simplesmente tirar alguma dúvida.",
+    "body7": "Preencha o formulário ao lado com seu nome, e-mail e mensagem. — Responderemos o mais breve possível.",
+    "emailLabel": "NOSSO E-MAIL: AGYASOUNDS@GMAIL.COM",
+    "nameLabel": "Nome:",
+    "namePlaceholder": "Digite seu nome",
+    "emailFieldLabel": "E-mail:",
+    "emailPlaceholder": "Digite seu e-mail",
+    "messageLabel": "Mensagem:",
+    "messagePlaceholder": "Digite sua mensagem",
+    "send": "ENVIAR MENSAGEM",
+    "sending": "ENVIANDO...",
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar. Tente novamente."
+  },
+  "footer": {
+    "about1": "Criada em 2018, em São Paulo, Brasil, a Agya Sounds representa os sons do Terceiro Olho.",
+    "about2": "Em meio a uma sociedade caótica, nossa música serve como um farol, guiando o ouvinte a um estado superior de consciência e conexão espiritual.",
+    "about3": "Nossa curadoria foca em variações de Darkpsy e psicodelia intensa, projetada não apenas para ser ouvida, mas para ser sentida.",
+    "about4": "Acreditamos no poder da música para transcender o tempo e o espaço. Com a Agya, você não apenas escuta, você desperta.",
+    "menuInicio": "Início", "menuSobre": "Sobre", "menuArtistas": "Artistas",
+    "menuLancamentos": "Lançamentos", "menuTutoriais": "Tutoriais", "menuContato": "Contato",
+    "connectHeading": "Conecte-se com a Agya Sounds",
+    "linksHeading": "Links"
+  }
+}

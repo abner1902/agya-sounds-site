@@ -1,13 +1,19 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image'; // Importação necessária para otimização automática
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { useTranslations } from '@/contexts/IntlContext';
 
 export default function DemoCard() {
+  const t = useTranslations();
+  const pathname = usePathname();
+  const segments = (pathname || '/').split('/').filter(Boolean);
+  const locale = ['pt', 'en', 'es'].includes(segments[0]) ? segments[0] : 'pt';
+
   return (
     <section className="px-6 py-20 bg-white">
       <div className="mx-auto max-w-[1100px]">
-        {/* Card agora com animação de esmaecimento (Fade In) */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -16,30 +22,27 @@ export default function DemoCard() {
           className="relative w-full rounded-[40px] bg-[#2D1B94] p-8 md:p-12 overflow-hidden flex flex-col md:flex-row items-center gap-10 shadow-2xl"
         >
           
-          {/* Imagem do Personagem Otimizada */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image 
               src="/demo-character.webp" 
               alt="Produtor Agya" 
-              width={400} // Definimos o tamanho base para o Next calcular o aspecto
+              width={400}
               height={400}
-              priority // Carrega mais rápido para o Lighthouse não reclamar
+              priority
               className="w-full max-w-[400px] h-auto object-contain" 
             />
           </div>
           
-          {/* Conteúdo de Texto - Centralizado no Mobile */}
           <div className="w-full md:w-1/2 text-white text-center md:text-left flex flex-col items-center md:items-start">
             <h3 className="text-[32px] md:text-[45px] font-black uppercase tracking-tighter mb-4 leading-none">
-              ENVIE SUA DEMO
+              {t('demo.title')}
             </h3>
             <p className="text-sm md:text-base font-medium opacity-90 mb-8 max-w-[450px] leading-snug">
-              Buscamos Darkpsy autêntico. Envie seu link do SoundCloud ou Google Drive (WAV, 44.1kHz, 24-bit) com mixagem em -6dB. Mostre-nos sua evolução sonora.
+              {t('demo.description')}
             </p>
             
-            {/* Botão Link Direto para Contato */}
             <a
-              href="/contact?demo=true"
+              href={`/${locale}/contact?demo=true`}
               className="
                 inline-flex items-center justify-center h-16 px-8 
                 bg-[#FFD700] text-[#2D1B94] 
@@ -49,7 +52,7 @@ export default function DemoCard() {
                 active:scale-95
               "
             >
-              📩 Enviar Demo
+              📩 {t('demo.cta')}
             </a>
           </div>
         </motion.div>

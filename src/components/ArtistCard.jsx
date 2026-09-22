@@ -1,14 +1,18 @@
 'use client';
 
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useState } from 'react';
 
 export const ArtistCard = ({ artist, currentPage = 1 }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const [clicked, setClicked] = useState(false);
 
-  const artistUrl = `/artists/${artist.id}?fromPage=${currentPage}`;
+  const segments = (pathname || '/').split('/').filter(Boolean);
+  const locale = ['pt', 'en', 'es'].includes(segments[0]) ? segments[0] : 'pt';
+
+  const artistUrl = `/${locale}/artists/${artist.id}?fromPage=${currentPage}`;
   const imageSrc = '/images/artists/' + artist.image;
   const flagSrc = '/images' + artist.countryFlag;
 
@@ -44,10 +48,7 @@ export const ArtistCard = ({ artist, currentPage = 1 }) => {
         src={imageSrc} 
         alt={'Foto de ' + artist.name} 
         fill 
-        // CORREÇÃO: No mobile (640px) o grid é 2 colunas, então cada foto ocupa 50vw.
-        // No desktop (1024px+) o grid é 4 colunas, então cada foto ocupa 25vw.
         sizes="(max-width: 768px) 50vw, 25vw"
-        // O Sharp vai transformar o JPEG em AVIF com 70% de qualidade aqui:
         quality={70}
         className="object-cover opacity-90 group-hover:opacity-100" 
         style={imageStyle} 

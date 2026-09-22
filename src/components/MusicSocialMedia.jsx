@@ -1,10 +1,13 @@
 'use client';
 import dynamic from 'next/dynamic';
 import { TextAnimate } from "@/components/magicui/text-animate";
+import { useTranslations } from '@/contexts/IntlContext';
 
 const MeteorsLayer = dynamic(() => import('@/components/MeteorsLayer'), { ssr: false });
 
 export default function MusicSocialMedia() {
+  const t = useTranslations();
+
   return (
     <section id="music" className="relative overflow-hidden bg-black px-6 py-20 md:px-12 lg:py-32">
       <MeteorsLayer />
@@ -13,11 +16,11 @@ export default function MusicSocialMedia() {
         <div className="mb-16 text-center">
           <TextAnimate animation="slideUp" by="word" as="h2"
             className="font-sans text-[32px] font-black uppercase tracking-tighter text-white md:text-[50px] leading-none">
-            Nossas Frequências
+            {t('music.title')}
           </TextAnimate>
           <TextAnimate animation="fadeIn" by="word" delay={0.5} as="div"
             className="mt-4 font-sans text-[12px] font-bold uppercase tracking-[0.5em] text-[#B1A27A]">
-            Agya Sounds Streaming Hub
+            {t('music.subtitle')}
           </TextAnimate>
         </div>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">

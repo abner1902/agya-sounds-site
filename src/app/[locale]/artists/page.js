@@ -1,20 +1,26 @@
 'use client';
 import { useState, useMemo, useEffect, Suspense } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import { ArtistCard } from '@/components/ArtistCard';
 import { allArtists } from '@/data/artists';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from '@/contexts/IntlContext';
 
 function ArtistsContent() {
+  const t = useTranslations();
   const searchParams = useSearchParams();
   const router = useRouter();
-  
+  const pathname = usePathname();
+
+  const segments = (pathname || '/').split('/').filter(Boolean);
+  const locale = ['pt', 'en', 'es'].includes(segments[0]) ? segments[0] : 'pt';
+
   const pageFromUrl = parseInt(searchParams.get('page')) || 1;
   const [artistsPerPage, setArtistsPerPage] = useState(24);
 
   const handlePageChange = (newPage) => {
-    router.push(`/artists?page=${newPage}`, { scroll: false });
+    router.push(`/${locale}/artists?page=${newPage}`, { scroll: false });
     setTimeout(() => {
       const galleryTitle = document.querySelector('h1');
       if (galleryTitle) {
@@ -39,7 +45,6 @@ function ArtistsContent() {
   return (
     <div className="min-h-screen text-white font-['Gotham',_sans-serif] relative">
       <div className="fixed inset-0 w-full h-full -z-10 overflow-hidden">
-        {/* PASSO 1: OTIMIZAÇÃO DO FUNDO APLICADA ABAIXO */}
         <Image 
           src="/bg_artist_page_op_art.webp" 
           alt="background" 
@@ -53,9 +58,11 @@ function ArtistsContent() {
       </div>
 
       <div className="max-w-7xl mx-auto py-8 md:py-10 px-6 relative z-10">
-        <h1 className="text-[22px] md:text-[40px] font-black text-center mb-4 uppercase italic tracking-tighter leading-none">CONHEÇA OS ARTISTAS</h1>
+        <h1 className="text-[22px] md:text-[40px] font-black text-center mb-4 uppercase italic tracking-tighter leading-none">
+          {t('artistsGallery.title')}
+        </h1>
         <p className="text-zinc-400 text-center mb-8 md:mb-10 max-w-2xl mx-auto text-[12px] md:text-xl font-medium leading-relaxed normal-case tracking-wide italic">
-          AGYA SOUNDS apresenta produtores e DJs do casting para eventos de psytrance focados em psicodelia avançada.
+          {t('artistsGallery.description')}
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
@@ -72,7 +79,9 @@ function ArtistsContent() {
             >
               <ChevronLeft size={32}/>
             </button>
-            <span className="text-lg md:text-xl font-bold italic uppercase tracking-widest">Página {pageFromUrl} / {totalPages}</span>
+            <span className="text-lg md:text-xl font-bold italic uppercase tracking-widest">
+              {t('artistsGallery.pageLabel')} {pageFromUrl} / {totalPages}
+            </span>
 
             <button 
               onClick={() => handlePageChange(Math.min(pageFromUrl + 1, totalPages))} 

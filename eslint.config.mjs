@@ -3,13 +3,16 @@ import nextVitals from "eslint-config-next/core-web-vitals";
 
 const eslintConfig = defineConfig([
   ...nextVitals,
-  // Override default ignores of eslint-config-next.
   globalIgnores([
-    // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Pastas de backup/histórico — não são código de produção
+    ".backups/**",
+    "backups-agya/**",
+    ".tmp/**",
+    "scripts/**",
   ]),
 ]);
 
