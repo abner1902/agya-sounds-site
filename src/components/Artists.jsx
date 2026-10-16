@@ -56,6 +56,7 @@ export default function Artists() {
                   src={`/images/artists/${artist.image}`}
                   alt={artist.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 626px"
                   className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" 
                   priority={artist.id === 'absycho'}
                 />

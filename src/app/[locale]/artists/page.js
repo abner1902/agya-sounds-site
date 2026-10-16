@@ -74,6 +74,8 @@ function ArtistsContent() {
         {totalPages > 1 && (
           <div className="flex justify-center items-center gap-6 pb-10">
             <button 
+              type="button"
+              aria-label="Página anterior"
               onClick={() => handlePageChange(Math.max(pageFromUrl - 1, 1))} 
               className="p-3 bg-zinc-900 rounded-full hover:bg-violet-700 transition-all"
             >
@@ -84,6 +86,8 @@ function ArtistsContent() {
             </span>
 
             <button 
+              type="button"
+              aria-label="Próxima página"
               onClick={() => handlePageChange(Math.min(pageFromUrl + 1, totalPages))} 
               className="p-3 bg-zinc-900 rounded-full hover:bg-violet-700 transition-all"
             >

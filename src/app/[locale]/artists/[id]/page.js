@@ -38,7 +38,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
 
   const getYoutubeEmbed = (url) => {
     if (!url) return "s592tz0wLr0";
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : "s592tz0wLr0";
   };
@@ -52,6 +52,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
           alt="background"
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90" />
@@ -67,7 +68,7 @@ export default function ArtistBioPage({ params: paramsPromise }) {
         </button>
 
         <div className="relative w-full aspect-[1323/882] rounded-sm overflow-hidden shadow-2xl mb-16 border border-white/5">
-          <Image src={`/images/artists/${artist.image}`} alt={artist.name} fill className="object-cover" priority />
+          <Image src={`/images/artists/${artist.image}`} alt={artist.name} fill sizes="(max-width: 1323px) 100vw, 1323px" className="object-cover" priority />
         </div>
 
         <div className="flex flex-col items-center mb-20 text-center">

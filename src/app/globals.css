@@ -40,6 +40,17 @@
 @theme {
   --color-agya-dark: #000000;
   --color-agya-gray: #1a1a1a;
+  --color-background: #000000;
+  --color-primary: #6d28d9;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #ffffff;
+  --color-destructive: #dc2626;
+  --color-destructive-foreground: #ffffff;
+  --color-accent: #b1a27a;
+  --color-accent-foreground: #000000;
+  --color-input: rgb(255 255 255 / 0.1);
+  --color-ring: #b1a27a;
 }
 
 @layer base {

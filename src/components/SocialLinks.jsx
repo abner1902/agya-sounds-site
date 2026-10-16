@@ -84,7 +84,9 @@ export default function SocialLinks() {
                   className="w-10 h-10 transition-transform duration-300 group-hover:scale-110"
                   style={{ fill: social.color }}
                   xmlns="http://www.w3.org/2000/svg"
+                  aria-label={social.name}
                 >
+                  <title>{social.name}</title>
                   <path d={social.path} />
                 </svg>
               </div>

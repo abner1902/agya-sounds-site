@@ -89,7 +89,7 @@ export default function Navbar() {
               <LanguageSwitcher />
             </div>
 
-            <a href="https://agyasounds.bandcamp.com" target="_blank" rel="noopener noreferrer" className="text-2xl text-white/80 transition-colors hover:text-[#B1A27A]">
+            <a href="https://agyasounds.bandcamp.com" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp" className="text-2xl text-white/80 transition-colors hover:text-[#B1A27A]">
               <FaBandcamp />
             </a>
 

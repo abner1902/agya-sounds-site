@@ -11,6 +11,9 @@ const Particles = dynamic(
 );
 
 const RELEASES_DATA = [
+  { id: 4, title: 'Welcome to Derry EP', artist: 'Mandinga',
+    image: '/images/releases/mandinga-welcome-to-derry.webp',
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/welcome-to-derry-ep', isFree: false },
   { id: 1, title: 'Story Magician EP', artist: 'Madara',
     image: '/images/releases/madara-arte-insta.webp',
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/story-magician-ep', isFree: false },
@@ -19,10 +22,7 @@ const RELEASES_DATA = [
     bandcampUrl: 'https://agyasounds.bandcamp.com/album/seeds-of-a-sunlit-mind-ep', isFree: true },
   { id: 3, title: 'Pineal Vision EP', artist: 'ABSYCHO',
     image: '/images/releases/pineal-vision.webp',
-    bandcampUrl: 'https://agyasounds.bandcamp.com/album/pineal-vision-ep', isFree: false },
-  { id: 4, title: 'V/A - Fungus Slug', artist: 'Compiled by Ovni Messenger',
-    image: '/images/releases/fungus-slug.webp',
-    bandcampUrl: 'https://agyasounds.bandcamp.com/album/v-a-fungus-slug-compiled-by-ovni-messenger', isFree: false }
+    bandcampUrl: 'https://agyasounds.bandcamp.com/album/pineal-vision-ep', isFree: false }
 ];
 
 export default function Releases() {
@@ -42,13 +42,13 @@ export default function Releases() {
         </p>
 
         <div className="grid grid-cols-4 gap-[30px] max-[1100px]:grid-cols-2 max-[1100px]:gap-[25px] max-[640px]:grid-cols-1 max-[640px]:gap-[30px]">
-          {RELEASES_DATA.map((release) => (
+          {RELEASES_DATA.map((release, index) => (
             <div key={release.id} className="flex flex-col items-center rounded-[20px] bg-white/5 border border-white/5 px-5 pb-[30px] pt-[25px] text-center transition-all duration-300 hover:bg-white/10 hover:-translate-y-[5px]">
               <a href={release.bandcampUrl} target="_blank" rel="noopener noreferrer" className="group mb-5 block w-full aspect-square overflow-hidden rounded-2xl bg-[#111] shadow-[0_10px_30px_rgba(0,0,0,0.5)] cursor-pointer">
                 <Image src={release.image} alt={release.title} width={400} height={400}
                   sizes="(max-width: 640px) 100vw, (max-width: 1100px) 50vw, 25vw" quality={75}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  priority={release.id <= 2} />
+                  priority={index < 2} />
               </a>
 
               <h3 className="mb-2 font-sans text-[20px] font-bold text-white max-md:text-[18px]">{release.title}</h3>

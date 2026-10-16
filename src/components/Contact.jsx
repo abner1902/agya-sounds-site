@@ -63,8 +63,9 @@ export default function Contact() {
           
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex flex-col gap-2 flex-1">
-              <label className="text-black text-[14px] font-black uppercase">{t('contact.nameLabel')}</label>
+              <label htmlFor="contact-nome" className="text-black text-[14px] font-black uppercase">{t('contact.nameLabel')}</label>
               <input
+                id="contact-nome"
                 type="text"
                 name="nome"
                 value={form.nome}
@@ -74,8 +75,9 @@ export default function Contact() {
               />
             </div>
             <div className="flex flex-col gap-2 flex-1">
-              <label className="text-black text-[14px] font-black uppercase">{t('contact.emailFieldLabel')}</label>
+              <label htmlFor="contact-email" className="text-black text-[14px] font-black uppercase">{t('contact.emailFieldLabel')}</label>
               <input
+                id="contact-email"
                 type="email"
                 name="email"
                 value={form.email}
@@ -87,8 +89,9 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-black text-[14px] font-black uppercase">{t('contact.messageLabel')}</label>
+            <label htmlFor="contact-mensagem" className="text-black text-[14px] font-black uppercase">{t('contact.messageLabel')}</label>
             <textarea
+              id="contact-mensagem"
               name="mensagem"
               value={form.mensagem}
               onChange={handleChange}
@@ -118,7 +121,7 @@ export default function Contact() {
           )}
 
           <div className="relative w-full h-[200px] mt-4">
-            <Image src="/demo-character.webp" alt="Produtor Agya" fill className="object-contain" quality={80} />
+            <Image src="/demo-character.webp" alt="Produtor Agya" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-contain" quality={80} />
           </div>
         </div>
       </div>

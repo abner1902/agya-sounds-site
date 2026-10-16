@@ -10,7 +10,7 @@ export default function About() {
   return (
     <section id="sobre" className="relative flex min-h-[80vh] items-center justify-center overflow-hidden bg-black px-5 py-25">
       <div className="absolute inset-0 z-1 opacity-20 pointer-events-none">
-        <Image src="/fundo_op_art.webp" alt="Op Art Texture" fill className="object-cover" quality={40} />
+        <Image src="/fundo_op_art.webp" alt="Op Art Texture" fill sizes="100vw" className="object-cover" quality={40} />
       </div>
       
       <div className="z-10 w-full max-w-225 text-center">
